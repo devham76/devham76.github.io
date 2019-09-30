@@ -115,7 +115,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-       url: mailto:devham76@gmail.com
+      # url: mailto:devham76@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -130,7 +130,7 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-       url: "https://www.instagram.com/traveller_ham/"
+      # url: "https://www.instagram.com/traveller_ham/"
 
 # Site Footer
 footer:
@@ -149,10 +149,10 @@ footer:
       # url:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-       url: mailto:devham76@gmail.com
+      # url: mailto:devham76@gmail.com
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-       url: "https://www.instagram.com/traveller_ham/"
+      # url: "https://www.instagram.com/traveller_ham/"
 
 
 # Reading Files
