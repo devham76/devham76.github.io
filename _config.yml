@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Hyemi Lee"
-  avatar           : "![myphoto](https://user-images.githubusercontent.com/55946791/65856418-8bb7e980-e39c-11e9-9627-d3e9ebbcc77a.JPG)"
+  avatar           : ![myphoto](https://user-images.githubusercontent.com/55946791/65856418-8bb7e980-e39c-11e9-9627-d3e9ebbcc77a.JPG)
   bio              : "주니어 개발자의 삽질이야기"
   location         : "Seoul/Korea"
   email            :
