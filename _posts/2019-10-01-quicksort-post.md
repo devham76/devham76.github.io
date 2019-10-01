@@ -1,5 +1,5 @@
 ---
-title: "JAVA, Algorithm, 퀵정렬"
+title: "Algorithm, JAVA, 퀵정렬"
 date: 2019-10-01 17:30:28 -0400
 categories: Algorithm
 tags : [Algorithm, JAVA]
