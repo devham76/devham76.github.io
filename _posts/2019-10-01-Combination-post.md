@@ -1,5 +1,5 @@
 ---
-title: "JAVA, Algorithm, 조합"
+title: "Algorithm, JAVA, Combination (조합)"
 date: 2019-10-01 15:30:28 -0400
 categories: Algorithm
 tags : [Algorithm, JAVA]
