@@ -1,10 +1,9 @@
 ---
 title: "JAVA, 알고리즘, 조합"
 date: 2019-10-01 15:30:28 -0400
-categories: 알고리즘
-tags : 알고리즘, 자바
+categories: Algorithm
+tags : [Algorithm, JAVA]
 ---
-[참고] <https://bcp0109.tistory.com/15?category=848939>
 ## **조합**
 - 숫자 n개에서 r개를 중복되지 않게 뽑자.
 - 예) 
@@ -20,7 +19,7 @@ i=0일때 즉, 인덱스 0 인 값 1을 선택 했다면,
 더이상 1은 고려 대상에서 제외 되고
 다음 for문은 무조건 i+1=1 부터 시작합니다.
 
-~~~java
+```java
 import java.util.*;
 public class Combination {
 /*
@@ -79,4 +78,12 @@ public class Combination {
 	
 }
 
-~~~
+```
+---
+
+## Reference 
+
+(https://bcp0109.tistory.com/15?category=848939)<br>
+
+
+---
