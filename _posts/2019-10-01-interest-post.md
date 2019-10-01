@@ -1,8 +1,8 @@
 ---
-title: "무엇을 언제 써야할까? Node JS vs Django!"
+title: "WEB, 무엇을 언제 써야할까? Node JS vs Django!"
 date: 2019-10-01 15:30:28 -0400
-categories: 관심사
-tags : 관심사, 유튜브영상
+categories: WEB
+tags : [WEB, webproject]
 ---
 [참고]
 https://www.youtube.com/watch?v=PnhmeFakkXg
