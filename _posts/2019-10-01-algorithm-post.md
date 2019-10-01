@@ -1,5 +1,5 @@
 ---
-title: "JAVA, 알고리즘, 조합"
+title: "JAVA, Algorithm, 조합"
 date: 2019-10-01 15:30:28 -0400
 categories: Algorithm
 tags : [Algorithm, JAVA]
@@ -83,7 +83,7 @@ public class Combination {
 
 ## Reference 
 
-(https://bcp0109.tistory.com/15?category=848939)<br>
+https://bcp0109.tistory.com/15?category=848939<br>
 
 
 ---
