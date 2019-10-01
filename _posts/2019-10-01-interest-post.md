@@ -4,9 +4,6 @@ date: 2019-10-01 15:30:28 -0400
 categories: 관심사
 tags : 관심사, 유튜브영상
 ---
-<style>
-  .content {font-size:16px; }
-  </style>
 [참고]
 https://www.youtube.com/watch?v=PnhmeFakkXg
 
