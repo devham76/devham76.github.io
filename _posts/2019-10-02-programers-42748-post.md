@@ -17,12 +17,7 @@ public class Level1_42748 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*
-		int[] array = {1, 5, 2, 6, 3, 7, 4};
-		int[][] commands = {{2,5,3}, {4,4,1}, {1,7,3}};
-		int[] s = solution(array, commands);
-		*/
-	 	// 해당 실행 소스가 github에 업로드 안되서 주석처리함
+
 	}
 	public static int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
