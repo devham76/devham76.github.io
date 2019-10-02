@@ -7,7 +7,7 @@ tags : [WEB, webproject]
 ---
 ## 인터넷 접속 과정
 1. 내 노트북 웹 브라우저( client )에서 google.com( domain )을 입력하고 엔터를 친다.
-2 .DNS server가 도메인을 ip address로 변환하여 내 노트북으로 전달해준다.
+2. DNS server가 도메인을 ip address로 변환하여 내 노트북으로 전달해준다.
 3. 그 ip 주소로  구글에 접속(request)하게된다.
 4. google.com( server )에서 답장을 내 컴퓨터로 보낸다(response)
 5. 내 노트북에 구글 페이지가 보인다.
