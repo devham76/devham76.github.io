@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Hyemi Lee"
-  avatar           : ![myphoto](https://user-images.githubusercontent.com/55946791/65856418-8bb7e980-e39c-11e9-9627-d3e9ebbcc77a.JPG)
+  avatar           : ![myphoto](https://user-images.githubusercontent.com/55946791/66455223-0ec7f680-eaa5-11e9-852f-b3d80a385e55.JPG)
   bio              : "주니어 개발자의 삽질이야기"
   location         : "Seoul/Korea"
   email            :
@@ -289,7 +289,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments:  true
       share: true
       related: true
 remote_theme : mmistakes/minimal-mistakes
