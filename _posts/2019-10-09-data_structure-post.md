@@ -33,6 +33,7 @@ Array / ArrayList / LinkedList
 * *remove*
   remove(객체) : 삭제결과 boolen으로 리턴
   remove(index) : 삭제 후 삭제된 항목 리턴
+  
 ---
 ## 2. ArrayList vs LinkedList
 
