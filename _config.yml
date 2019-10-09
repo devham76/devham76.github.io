@@ -108,14 +108,14 @@ analytics:
 # Site Author
 author:
   name             : "Hyemi Lee"
-  avatar           : ![myphoto](https://user-images.githubusercontent.com/55946791/66455223-0ec7f680-eaa5-11e9-852f-b3d80a385e55.JPG)
+  avatar           : "/assets/images/myphoto.jpg"
   bio              : "주니어 개발자의 삽질이야기"
   location         : "Seoul/Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "devham76@gmail.com"
+       url: "devham76@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
