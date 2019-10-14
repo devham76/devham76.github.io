@@ -1,5 +1,5 @@
 ---
-title: "WEB, boostcourse, "
+title: "WEB, boostcourse, Servlet"
 date: 2019-10-14 17:30:28 -0400
 categories: WEB
 tags : [WEB, boostcourse]
@@ -16,7 +16,5 @@ tags : [WEB, boostcourse]
 
 ---
 ## Reference
-- <https://ithub.tistory.com/101>
-- <https://titus94.tistory.com/4>
 
-- [Tomcat 다운받기 및 설치하기]<https://www.edwith.org/boostcourse-web/lecture/16684/>
+- [1) Servlet 이란?]<https://www.edwith.org/boostcourse-web/lecture/16686/>

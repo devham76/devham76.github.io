@@ -17,7 +17,7 @@ tags : [WEB, boostcourse]
 대표적인 WAS가 아파치톰캣(톰캣이라고 부름)이다.
 - WAS라고 불리며, 웹서버와 웹 컨테이너의 결합으로 다양한 기능을 컨테이너에 구현하여 역할을 수행할 수 있는 서버를 말한다.
 
--컴퓨터에 운영체제를 설치해야만 컴퓨터를 사용할 수 있는 것 처럼, 자바를 이용하여 작성된 웹 애플리케이션은 WAS가 있어야만 실행할 수 있다.
+- 컴퓨터에 운영체제를 설치해야만 컴퓨터를 사용할 수 있는 것 처럼, <u>자바를 이용하여 작성된 웹 애플리케이션은 WAS가 있어야만 실행</u>할 수 있다.
 
 ### WAS
 - WAS의 구성:
@@ -57,4 +57,4 @@ tags : [WEB, boostcourse]
 - <https://ithub.tistory.com/101>
 - <https://titus94.tistory.com/4>
 
-- [Tomcat 다운받기 및 설치하기]<https://www.edwith.org/boostcourse-web/lecture/16684/>
+- [Tomcat 다운받기 및 설치하기](https://www.edwith.org/boostcourse-web/lecture/16684/)
