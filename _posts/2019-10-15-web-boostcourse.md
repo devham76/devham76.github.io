@@ -49,8 +49,11 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 }
 ```
 
+
+
 ### get
 요청할때 가지고 온 파라메터값 가져오기
+http://localhost:8080/firstweb/ParameterServlet?name=hyemi&age=20
 ```java
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
   response.setContentType("text/html");
