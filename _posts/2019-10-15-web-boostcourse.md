@@ -9,6 +9,10 @@ tags : [WEB, boostcourse]
 1. HttpServletRequest : 클라이언트가 서버에게 보낸 요청을 추상화한 객체
 2. HttpServletResponse : 서버가 클라이언트에게 응답하기 위한 정보를 추상화한 객체
 
+- 요청 처리 객체 : 클라이언트가 요청하는 정보를 가지고 있다
+ex) 회원 아이디, 회원 비밀번호
+- 응답 처리 객체 : 클라이언트에게 응답할 정보를 가지고 있다
+ex) 회원이다 or 회원이 아니다
 ---
 
 ![1_5_4_request_response](https://user-images.githubusercontent.com/55946791/66802408-475d4980-ef57-11e9-884f-926ad61ce9df.png)
@@ -31,7 +35,7 @@ WAS는 웹 브라우저로부터 Servlet요청을 받으면,
 ### 헤더 정보 가졍오기
 ```java
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-  response.setContentType("text/html");
+  response.setContentType("text/html"); // 응답을 할때 타입이 html파일 형식이다.
   PrintWriter out = response.getWriter();	// 요청 객체로 부터 응답을 보낼 통로를 알아온다
   out.println("<html>");
   out.println("<head><title>form</title></head>");
@@ -48,8 +52,6 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
   out.println("</html>");
 }
 ```
-
-
 
 ### get
 요청할때 가지고 온 파라메터값 가져오기
