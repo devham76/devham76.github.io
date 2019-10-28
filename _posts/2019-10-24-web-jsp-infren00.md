@@ -18,6 +18,15 @@ tags : [WEB, JSP]
 ```java
 <jsp:include page="includeex.jsp" flush="true" />
 ```
+##### parameter
+![action tag param](https://user-images.githubusercontent.com/55946791/67473759-3f578500-f68e-11e9-9b51-f6512173901b.JPG)
+- 예제
+```java
+<jsp:forward page="action_forward.jsp" >
+	<jsp:param name="id" value="hyemi id"/>
+	<jsp:param name="pw" value="1234"/>
+</jsp:forward>
+```
 
 ---
 ## Reference
