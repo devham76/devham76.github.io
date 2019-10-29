@@ -11,11 +11,17 @@ tags : [WEB, JSP]
 - 빈을 만든다 : getter,setter있는 class파일을 만든다
 ![bean](https://user-images.githubusercontent.com/55946791/67659317-5accd380-f99f-11e9-978f-15d9777fec4c.JPG)
 
+### 빈을 사용하는 이유
+- JSP페이지에 뷰 부분과 로직 부분을 같이 작성하게되면 굉장히 복잡해지게 됩니다.
+
+- 그런 것을 피하기 위해 JSP 페이지의 로직부분을 모듈화해서 분리함으로써 프로그램의 효율을 높이는 것이 사용하는 목적입니다.
+
 ---
 ### 빈의 사용
 ##### useBean
 - 특정 Bean을 사용한다고 명시 할때 사용
-```jsp
+
+```java
 <jsp:useBean id="student" calss="com.javalec.ex.Student" scope="page" />
 // id : 참조변수. scope : 범위
 ```
@@ -26,21 +32,22 @@ tags : [WEB, JSP]
 - application : 웹 어플리케이션 생명주기와 동일하게 사용 가능
 ##### setProperty
 - 데이터 값 설정시 사용
-```jsp
+
+```java
 <jsp:setProperty name="student" property="name" value="로꼬" />
 // name : 빈이름, property : 속성이름, value : 데이터 값
 ```
 
 ##### getProperty
 - 데이터 값을 가져올때 사용
-```jsp
+```java
 <jsp:getProperty name="student" property="name"/>
 // name : 빈이름, property : 속성이름
 ```
 ---
 ### 예제
 - beanEx.jsp
-```jsp
+```java
 <jsp:useBean id="student" class="com.javalac.ex.Student" scope="page"></jsp:useBean>
 
 

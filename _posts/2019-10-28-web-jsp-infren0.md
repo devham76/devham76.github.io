@@ -7,7 +7,8 @@ tags : [WEB, JSP]
 - 예외가 발생했을때 프로그램이 멈추면 안되기 때문에 예외 처리해준다
 ##### [방법1]
 - 예외 발생
-```jsp
+
+```java
 <%@ page errorPage="errorPage.jsp" %>
 ```
 - 예외 페이지
@@ -17,11 +18,11 @@ tags : [WEB, JSP]
 // 해당페이지는 정상페이지임을 명시해줌
 <% response.setStatus(200);%>
 // exctption 객체 사용
-<%= excetpion.getMessage()%>
+<%= excetpion.getMessage() %>
 ```
 
 ##### [방법2]
-```xml
+```java
 <error-page>
   <error-code>404<error-code>
   <location>/error404.jsp<location>
@@ -30,7 +31,6 @@ tags : [WEB, JSP]
     <error-code>500<error-code>
     <location>/error500.jsp<location>
   <error-page>
-
 ```
 ---
 ## Reference

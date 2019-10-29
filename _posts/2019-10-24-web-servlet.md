@@ -12,9 +12,9 @@ tags : [WEB, SERVLET]
 - value : name에 해당 하는 값 (ex.name=value)
 2. input , submit
 - form내의 데이터를 전송할 때 사용
-- ex. <input type="submit" value="전송">
+- ex. \<input type="submit" value="전송">
 3. form태그
-- <form action="요청하는 컴포넌트 이름" method="요청을 처리하는 방식">
+- \<form action="요청하는 컴포넌트 이름" method="요청을 처리하는 방식">
 
 ---
 #### 예제 코드
@@ -48,6 +48,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
   - <Connector URIEncoding="UTF-8" ....>
 - POST 방식
   - request.setCharacterEncoding("UTF-8");
+
 ---
 ## Reference
 
