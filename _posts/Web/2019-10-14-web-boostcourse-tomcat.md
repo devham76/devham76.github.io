@@ -3,6 +3,9 @@ title: "WEB, boostcourse, Apache Tomcat, WAS"
 date: 2019-10-14 15:30:28 -0400
 categories: WEB
 tags : [WEB, boostcourse]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 ### Apache
 - 아파치 재단에서 만든 sw

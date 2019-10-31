@@ -3,6 +3,9 @@ title: "WEB, DOM이란?"
 date: 2019-10-02 14:30:28 -0400
 categories: WEB
 tags : [WEB, DOM, front-end]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 ---
 - ## Document Object Model
@@ -60,7 +63,7 @@ html문서의 태그(<html><body>..등)들을 JavaScript가 이용할 수 있는
 
 
 ---
-## Reference 
+## Reference
 [쉽게 읽는 프로그래밍](https://m.blog.naver.com/magnking/220972680805)
 
 

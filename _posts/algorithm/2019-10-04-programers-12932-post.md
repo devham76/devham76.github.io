@@ -1,8 +1,8 @@
 ---
 title: "Algorithm, programmers, 12932(자연수 뒤집어 배열로 만들기)"
 date: 2019-10-04 13:30:28 -0400
-categories: Algorithm문제풀이
-tags : [Algorithm, JAVA, 문제풀이]
+categories: Algorithm
+tags : [Algorithm, 큐]
 ---
 난이도 하
 
@@ -18,13 +18,13 @@ public class Level_1_12932 {
 		solution(n);
 	}
 	public static int[] solution(long n) {
-	      
+
 	      Queue<Integer> queue = new LinkedList<Integer>();
 	      do {
 	    	  queue.offer( (int) (n%10) );
 	    	  n = n / 10;
 	      }while( n != 0 );
-	      
+
 	      int[] answer = new int[ queue.size() ];
 	      int i = 0;
 	      while (!queue.isEmpty()) {
@@ -38,5 +38,5 @@ public class Level_1_12932 {
 
 
 ---
-## Reference 
+## Reference
 [문제로 가기](https://programmers.co.kr/learn/courses/30/lessons/12932)

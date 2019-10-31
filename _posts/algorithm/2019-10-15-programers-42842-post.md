@@ -1,8 +1,8 @@
 ---
 title: "Algorithm, programmers, 42842(카펫)"
 date: 2019-10-15 12:30:28 -0400
-categories: Algorithm문제풀이
-tags : [Algorithm, JAVA, 문제풀이, 완전탐색]
+categories: Algorithm
+tags : [Algorithm, 완전탐색]
 ---
 난이도 하
 

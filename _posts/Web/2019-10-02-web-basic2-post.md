@@ -3,6 +3,9 @@ title: "WEB, 웹서버, 아파치 기본"
 date: 2019-10-02 22:39:28 -0400
 categories: WEB
 tags : [WEB, webproject]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 ---
 ## 인터넷 브라우저와 서버
@@ -27,7 +30,7 @@ tags : [WEB, webproject]
 elinks 127.0.0.1 또는 elinks [사설ip] 를 입력하여 확인가능
 
 ---
-## Reference 
+## Reference
 [생활코딩/웹서버,아파치](https://opentutorials.org/course/2598/14446)
 
 

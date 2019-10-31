@@ -3,6 +3,9 @@ title: "WEB, 기본적인 인터넷, 네트워크 그리고 서버"
 date: 2019-10-01 15:30:28 -0400
 categories: WEB
 tags : [WEB, webproject]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 ---
 ## 인터넷 접속 과정
