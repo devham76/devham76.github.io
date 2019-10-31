@@ -1,34 +1,36 @@
 # SITE CONFIGURATION
-baseurl:
-url: "https://devham76.github.io"
+baseurl: "/type-theme"
+url: "https://rohanchandra.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: devYurim
-  avatar: assets/img/blogmark.png
+  title: Type Theme
+  avatar: assets/img/avatar.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "developer blog" # used by search engines
+  description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
   header_text: >
-     <p>Intelligent System Lab Researcher</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
+     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
 
   # Icons
-  rss: true
-  email_address: "soaka94@naver.com" # Full email address, e.g. "sam@example.com"
+  rss: false
+  email_address: # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
   dribbble:
   facebook:
   flickr:
   gitlab:
-  github: "devYurim"
+  github: "rohanchandra/type-theme"
+  gitter:
   google_plus:
   instagram:
   linkedin:  # Full URL
@@ -43,10 +45,10 @@ theme_settings:
   youtube:
 
   # Scripts
-  google_analytics: UA-111748939-1 # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname: devYurim
+  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  disqus_shortname:
   katex: true # Enable if using math markup
-  search: true # Enable the search feature
+  search: false # Enable the search feature
 
   # Localization strings
   str_follow_on: "Follow on"
@@ -62,21 +64,14 @@ theme_settings:
 
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Nanum+Gothic:400,700"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
 
   # Post navigation
-  post_navigation: true
-
-encoding: 'utf-8'
-# Configure the plugin here
-category_path: "category" # <- default value
-category_layout: "category.html" # <- default value
+  post_navigation: false
 
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
-
-animation: true
 
 # BUILD SETTINGS
 markdown: kramdown
@@ -84,14 +79,7 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins:
-  - jekyll-paginate
-  - jekyll-category-pages
-gem:
-    - jekyll-sitemap
-    - jekyll-feed
-    - wdm
-theme: jekyll-theme-type
+plugins: [jekyll-paginate]
 exclude:
   - Gemfile
   - Gemfile.lock
