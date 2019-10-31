@@ -4,6 +4,7 @@ date: 2019-10-30 12:30:28 -0400
 categories: Algorithm문제풀이
 tags : [Algorithm, 문제풀이, 해싱]
 ---
+
 ##### 빠른 풀이
 ```java
 public static String solution(String[] participant, String[] completion) {
@@ -17,7 +18,6 @@ public static String solution(String[] participant, String[] completion) {
   return participant[i];
 }
 ```
-
 ##### 해시 풀이
 ```java
 package org.programmers;
@@ -48,7 +48,7 @@ public class marathon {
         		hm.put(part, val);
         	}
         }
-        
+
         // 참여자중에 완주자는 value를 0으로 한다
         for (String comp:completion) {
         	val = hm.get(comp) -1;
