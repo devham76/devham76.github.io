@@ -1,298 +1,273 @@
-# Type Theme
+# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
-![Default Type Theme blog](https://user-images.githubusercontent.com/816965/30518919-d5978024-9bcd-11e7-81b3-3dd07e99a1f9.png)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
+[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.6-blue.svg)](https://jekyllrb.com/)
+[![Ruby gem](https://img.shields.io/gem/v/minimal-mistakes-jekyll.svg)](https://rubygems.org/gems/minimal-mistakes-jekyll)
+[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/mmistakes)
 
-A free and open-source [Jekyll](https://jekyllrb.com) theme. Great for blogs and easy to customize.
+Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building personal sites, blogs, and portfolios. As the name implies, styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
-[Demo](https://rohanchandra.github.io/type-theme/)
+:sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
+
+**If you enjoy this theme, please consider [supporting me](https://www.paypal.me/mmistakes) to continue developing and maintaining it.**
+
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/mmistakes)
+
+**Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll throw `Unknown tag 'include_cached'` errors at build.
+
+[![Minimal Mistakes live preview][2]][1]
+
+[1]: https://mmistakes.github.io/minimal-mistakes/
+[2]: screenshot.png (live preview)
+
+![layout examples](screenshot-layouts.png)
+
+## Notable features
+
+- Bundled as a "theme gem" for easier installation/upgrading.
+- Compatible with GitHub Pages.
+- Support for Jekyll's built-in Sass/SCSS preprocessor.
+- Nine different skins (color variations).
+- Several responsive layout options (single, archive index, search, splash, and paginated home page).
+- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data.
+- Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
+- Commenting support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman](https://staticman.net/), and [utterances](https://utteranc.es/)).
+- [Google Analytics](https://www.google.com/analytics/) support.
+- UI localized text in English (default), Brazilian Portuguese (Português brasileiro), Catalan, Chinese, Danish, Dutch, French (Français), German (Deutsch), Greek, Hindi (हिंदी), Hungarian, Indonesian, Italian (Italiano), Japanese, Korean, Malayalam, Nepali (Nepalese), Persian (فارسی), Polish, Punjabi (ਪੰਜਾਬੀ), Romanian, Russian, Slovak, Spanish (Español), Swedish, Thai, Turkish (Türkçe), and Vietnamese.
+
+## Skins (color variations)
+
+This theme comes in nine different skins (including the default one).
+
+| `air` | `contrast` | `dark` |
+| --- | --- | --- |
+| ![air skin](https://mmistakes.github.io/minimal-mistakes/assets/images/air-skin-archive.png) | ![contrast skin](https://mmistakes.github.io/minimal-mistakes/assets/images/contrast-skin-archive.png) | ![dark skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dark-skin-archive.png) |
+
+| `dirt` | `mint` | `sunrise` |
+| --- | --- | --- |
+| ![dirt skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dirt-skin-archive.png) | ![mint skin](https://mmistakes.github.io/minimal-mistakes/assets/images/mint-skin-archive.png) | ![sunrise skin](https://mmistakes.github.io/minimal-mistakes/assets/images/sunrise-skin-archive.png) |
+
+| `aqua` | `neon` | `plum` |
+| --- | --- | --- |
+| ![aqua skin](https://mmistakes.github.io/minimal-mistakes/assets/images/aqua-skin-archive.png) | ![neon skin](https://mmistakes.github.io/minimal-mistakes/assets/images/neon-skin-archive.png) | ![plum skin](https://mmistakes.github.io/minimal-mistakes/assets/images/plum-skin-archive.png) |
+
+## Demo pages
+
+| Name                                        | Description                                           |
+| ------------------------------------------- | ----------------------------------------------------- |
+| [Post with Header Image][header-image-post] | A post with a large header image. |
+| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
+| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
+| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
+| [Sample Collection Page][sample-collection] | Single page from a collection. |
+| [Categories Archive][categories-archive] | Posts grouped by category. |
+| [Tags Archive][tags-archive] | Posts grouped by tag. |
+
+Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
+
+[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
+[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
+[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
+[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
+[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
+[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
+[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
+[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
+
+## Installation
+
+There are three ways to install: as a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes), as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) (GitHub Pages compatible), or forking/directly copying all of the theme files into your project.
+
+### Gem-based method
+
+With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
+
+This allows for easier installation and updating as you don't have to manage any of the theme files. To install:
+
+1. Add the following to your `Gemfile`:
+
+   ```ruby
+   gem "minimal-mistakes-jekyll"
+   ```
+
+2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+
+   ```bash
+   bundle
+   ```
+
+3. Set the `theme` in your project's Jekyll `_config.yml` file:
+
+   ```yaml
+   theme: minimal-mistakes-jekyll
+   ```
+
+To update the theme run `bundle update`.
+
+### Remote theme method
+
+Remote themes are similar to Gem-based themes, but do not require `Gemfile` changes or whitelisting making them ideal for sites hosted with GitHub Pages.
+
+To install:
+
+1. Create/replace the contents of your `Gemfile` with the following:
+
+   ```ruby
+   source "https://rubygems.org"
+
+   gem "github-pages", group: :jekyll_plugins
+   ```
+
+2. Add `jekyll-include-cache` to the `plugins` array of your `_config.yml`.
+
+3. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
+
+   ```bash
+   bundle
+   ```
+
+4. Add `remote_theme: "mmistakes/minimal-mistakes@4.17.2"` to your `_config.yml` file. Remove any other `theme:` or `remote_theme:` entry.
+
+**Looking for an example?** Fork the [Minimal Mistakes remote theme starter](https://github.com/mmistakes/mm-github-pages-starter) for the quickest method of getting a GitHub Pages hosted site up and running. Replace sample content with your own and configure as needed.
 
 ## Usage
 
-1. Fork and clone the [Type Theme repo](https://github.com/rohanchandra/type-theme): `git clone https://github.com/rohanchandra/type-theme`
-2. [Install Jekyll](https://jekyllrb.com/docs/installation/): `gem install jekyll`
-3. Install the theme's dependencies: `bundle install`
-4. Customize the theme (see below)
-5. Run the Jekyll server: `jekyll serve`
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
 
-## Customizing Type Theme
-
-Open `_config.yml` in a text editor to change most of the blog's settings.
-
-If a variable in this document is marked as "optional", disable the feature by removing all text from the variable. For example, to prevent the avatar from rendering in the header, the avatar line should read:
-
-```yml
-theme:
-  title: Type Theme
-  avatar:
-  gravatar:
-```
-
-Notice the avatar variable is left intentionally blank.
-
-Below is a summary of the configuration options in Type Theme.
-
-### Site configuration
-The most common configurations, included here for guidance, are:
-
-Jekyll website *without* a subpath (such as a GitHub Pages website for a given username):
-
-```yml
-# SITE CONFIGURATION
-baseurl: ""
-url: "https://username.github.io"
-```
-
-Jekyll website *with* subpath (like the Type Theme demo page):
-
-```yml
-# SITE CONFIGURATION
-baseurl: "/sub-directory"
-url: "https://username.github.io/"
-```
-
-Please configure this in `_config.yml` before using the theme.
-
-### Meta
-
-Meta variables hold basic information about your Jekyll site which will be used throughout the site and as meta properties for search engines, browsers, and the site's RSS feed.
-
-Change these variables in `_config.yml`:
-
-| Variable    | Example                          | Description                                                                                                                    | Optional |
-| ----------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| title       | My Jekyll Blog                   | Name of website                                                                                                                | Yes      |
-| avatar      | assets/img/avatar.png            | Path of avatar image, to be displayed in the theme's header                                                                    | Yes      |
-| gravatar    | f9879d71855b5ff21e4963273a886bfc | [MD5 hash of your email address](https://secure.gravatar.com/site/implement/hash/) to load your Gravatar in the theme's header | Yes      |
-| description | My blog posts                    | Short description, primarily used by search engines                                                                            | Yes      |
-
-### Header and footer text
-
-Change these variables in `_config.yml`:
-
-
-| Variable                  | Example                             | Description                                                             | Optional |
-| ------------------------- | ----------------------------------- | ----------------------------------------------------------------------- | -------- |
-| header_text               | Welcome to my Jekyll blog           | HTML (shown below the navigation) with a background colour for emphasis | Yes      |
-| header_text_feature_image | assets/img/sample_feature_img_3.png | Background image for the header text                                    | Yes      |
-| footer_text               | Copyright 2014                      | HTML (shown at end of the site) with lighter text                       | Yes      |
-
-### Icons
-
-Add your username on selected websites in the icon section of the `_config.yml` file to display the site's icon from [Font Awesome](https://fortawesome.github.io/Font-Awesome/) in the header navigation. All icon variables should be your username enclosed in quotes (e.g. "username"), except for the following variables:
-
-
-| Variable       | Example                                         | Description                                            | Optional |
-| -------------- | ----------------------------------------------- | ------------------------------------------------------ | -------- |
-| rss            | true                                            | Takes boolean value (true/false) to show RSS feed icon | Yes      |
-| email_address  | type@example.com                                | Email address                                          | Yes      |
-| linkedin       | https://www.linkedin.com/in/FirstLast           | Full URL to profile on LinkedIn                        | Yes      |
-| stack_exchange | https://stackoverflow.com/users/0000/first-last | Full URL to profile on Stack Exchange                  | Yes      |
-
-### Scripts
-
-Change these variables in `_config.yml`:
-
-
-| Variable         | Example      | Description                                                                                                                         | Optional |
-| ---------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| google_analytics | UA-123456-01 | Google Analytics [tracking ID](https://support.google.com/analytics/answer/1032385?hl=en)                                           | Yes      |
-| disqus_shortname | shortname    | Disqus [shortname](https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-)                                     | Yes      |
-| katex            | true         | Takes boolean value (true/false) to conditionally load [KaTeX](https://khan.github.io/KaTeX/) scripts required for math typesetting | Yes      |
-
-Scripts listed here are only loaded if you provide a value in the `_config.yml` file.
-
-### Localization strings
-
-Change localization string variables in `_config.yml`.
-
-English text used in the theme (such as the "continue reading" label) has been grouped  so you can quickly translate the theme or change labels to suit your needs.
-
-### Colours, typography, padding
-
-![A selection of colours set in Type Theme by modifying the CSS](https://cloud.githubusercontent.com/assets/816965/5142488/130869a6-71d7-11e4-8a38-a69ec1673436.png)
-
-
-| Variable     | Example                    | Description                          | Optional                                                     |
-| ------------ | -------------------------- | ------------------------------------ | ------------------------------------------------------------ |
-| google_fonts | "Playfair+Display:400,700\ | PT+Sans:400,700,700italic,400italic" | [Google Fonts](https://www.google.com/fonts) to load for use |
-
-Navigate to the `_sass > base` directory and open `_variables.scss` to change colours, typography and padding used in the theme with CSS.
-
-Once you have loaded a Google Font in `config.yml`, you can integrate the fonts into your CSS by changing the font-family in `_variables.scss`. For example, after loading the Playfair Display and PT Sans fonts from Google:
-
-```css
-// Typography
-$font-family-main: 'PT Sans', Helvetica, Arial, sans-serif;
-$font-family-headings: 'Playfair Display', Helvetica, Arial, sans-serif;
-```
-
-Mozilla's [ColorPicker](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool) is a helpful tool to get your preferred colours in hexadecimal or RGBA form for use in `_variables.scss`.
-
-### Customize style when using the remote_theme
-
-If you're using Type Theme as a `remote_theme`, you can override variables and styles.
-To do so, simply create a `assets/css/main.scss` file on your website with the following content:
-
-```scss
-// assets/css/main.scss
----
 ---
 
-@import "type-theme";
-```
+## Contributing
 
-`@import "type-theme";` includes the theme styles, so you can add custom imports before and after it, depending on your needs.
-Best practice is to put your custom files in the `_sass` folder of your project. Jekyll will automatically look for them there.
-For example, say you wanted to override some theme variables and add some custom styles, you can create the following files:
+Having trouble working with the theme? Found a typo in the documentation? Interested in adding a feature or [fixing a bug](https://github.com/mmistakes/minimal-mistakes/issues)? Then by all means [submit an issue](https://github.com/mmistakes/minimal-mistakes/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
 
-```scss
-// _sass/_variables.scss
-$background-color: black;
-```
+Minimal Mistakes has been designed as a base for you to customize and fit your site's unique needs. Please keep this in mind when requesting features and/or submitting pull requests. If it's not something that most people will use, I probably won't consider it. When in doubt ask. 
 
-```sass
-// _sass/_custom.sass
+This goes for author sidebar links and "share button" additions -- I have no intention of merging in every possibly option, the essentials are there to get you started :smile:.
 
-// SASS is supported as well, just note the file extension is .sass
-.feature-image header
-  height: 300px
-```
+### Pull Requests
 
-Then import them both into `main.scss`:
+When submitting a pull request:
 
-```scss
-// assets/css/main.scss
+1. Clone the repo.
+2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
+3. Open a pull request on GitHub and describe the feature or fix.
+
+Theme documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+To test the theme, run `bundle exec rake preview` and open your browser at `http://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
+
 ---
+
+## Credits
+
+### Creator
+
+**Michael Rose**
+
+- <https://mademistakes.com>
+- <https://twitter.com/mmistakes>
+- <https://github.com/mmistakes>
+
+### Icons + Demo Images:
+
+- [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
+- [Font Awesome](http://fontawesome.io/)
+- [Unsplash](https://unsplash.com/)
+
+### Other:
+
+- [Jekyll](http://jekyllrb.com/)
+- [jQuery](http://jquery.com/)
+- [Susy](http://susy.oddbird.net/)
+- [Breakpoint](http://breakpoint-sass.com/)
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](http://fitvidsjs.com/)
+- [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
+- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+- [Gumshoe](https://github.com/cferdinandi/gumshoe)
+- [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/)
+- [Lunr](http://lunrjs.com)
+
 ---
-
-@import "variables";
-@import "type-theme";
-@import "custom";
-```
-
-## Posts and pages in Type Theme
-Please refer to the [Jekyll docs for writing posts](https://jekyllrb.com/docs/posts/). Non-standard features are documented below.
-
-### Math typesetting
-Wrap math expressions with `$$` signs in your posts and make sure you have set the `katex` variable in `_config.yml` to `true` for math typesetting.
-
-For inline math typesetting, type your math expression on the *same line* as your content. For example:
-
-```latex
-Type math within a sentence $$2x^2 + x + c$$ to display inline
-```
-
-For display math typesetting, type your math expression on a *new line*. For example:
-
-```latex
-$$
-  \bar{y} = {1 \over n} \sum_{i = 1}^{n}y_i
-$$
-```
-
-Type Theme makes use for [KaTeX](https://khan.github.io/KaTeX/) for typesetting.
-
-### Feature images
-
-![Posts with geometric feature images](https://cloud.githubusercontent.com/assets/816965/5142406/19726478-71d6-11e4-8111-94f788b0e44d.png)
-
-Add a feature image by specifying a path to an image in the [front matter](http://jekyllrb.com/docs/frontmatter/) in the form of `feature-img: "img/PATH_TO_IMAGE.png"`.
-
-For example:
-
-```yml
----
-layout: post
-title: Hello World
-feature-img: "assets/img/sample_feature_img.png"
----
-```
-
-By default, the page title is displayed on top of the feature image, as well as on the browser's tab. You can change the feature image's displayed title by specifying a `feature-title` in the front matter:
-
-```yml
----
-layout: post
-title: Short title
-feature-title: A much longer title
-feature-img: "assets/img/sample_feature_img.png"
----
-```
-
-### Hiding pages from navigation
-
-In the front matter of a page, add `hide: true` to prevent the page from showing up in the header's navigation bar (visitors can still visit the URL through other means).
-
-For example:
-
-```yml
----
-layout: page
-title: "Error 404: Page not found"
-permalink: /404.html
-hide: true
----
-```
-
-### Sorting pages in navigation
-
-You can configure this theme to **sort your pages** in the header's navigation bar.
-
-- Set `site_navigation_sort` in theme settings to a property name e.g. `'order'`
-- In the front matter of a non-hidden page, add `order: n`
-
-For example:
-
-```yml
----
-layout: page
-title: Team
-permalink: /team/
-order: 4
----
-```
-
-### Tags
-
-Post tags should be placed between `[]` in your post metadata. Separate each tag with a comma.
-
-For example:
-
-```yml
----
-layout: post
-title: Markdown and HTML
-tags: [sample, markdown, html]
----
-```
-
-A tags listing will be automatically generated using the `tags.html` file provided in Type Theme. If you're not using the tags feature it is safe to delete `tags.html`.
-
-### Search
-
-The search feature can be activated in the `_config.yml` file by changing its value from `false` to `true`.
-
-```yml
-  #Scripts
-  search: true
-```
-
-Once activated, the search bar will appear in the header. This feature uses [Lunr](https://lunrjs.com/) and searches through the title, tags and content of your posts.
-
-### Subtitles
-A subtitle can be displayed below your title on permalink post pages.
-
-To enable this feature, add `subtitle` to your post metadata.
-
-For example:
-
-```yml
----
-layout: post
-title: "This is a title"
-subtitle: "This is a subtitle"
----
-```
 
 ## License
-[The MIT License (MIT)](https://github.com/rohanchandra/type-theme/blob/master/LICENSE)
+
+The MIT License (MIT)
+
+Copyright (c) 2013-2019 Michael Rose and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Minimal Mistakes incorporates icons from [The Noun Project](https://thenounproject.com/) 
+creators Garrett Knoll, Arthur Shlain, and tracy tam.
+Icons are distributed under Creative Commons Attribution 3.0 United States (CC BY 3.0 US).
+
+Minimal Mistakes incorporates [Font Awesome](http://fontawesome.io/),
+Copyright (c) 2017 Dave Gandy.
+Font Awesome is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL) 
+and [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates photographs from [Unsplash](https://unsplash.com).
+
+Minimal Mistakes incorporates [Susy](http://susy.oddbird.net/),
+Copyright (c) 2017, Miriam Eric Suzanne.
+Susy is distributed under the terms of the [BSD 3-clause "New" or "Revised" License](https://opensource.org/licenses/BSD-3-Clause).
+
+Minimal Mistakes incorporates [Breakpoint](http://breakpoint-sass.com/).
+Breakpoint is distributed under the terms of the [MIT/GPL Licenses](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [FitVids.js](https://github.com/davatron5000/FitVids.js/),
+Copyright (c) 2013 Dave Rubert and Chris Coyier.
+FitVids is distributed under the terms of the [WTFPL License](http://sam.zoy.org/wtfpl/).
+
+Minimal Mistakes incorporates [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/),
+Copyright (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com.
+Magnific Popup is distributed under the terms of the MIT License.
+
+Minimal Mistakes incorporates [Smooth Scroll](http://github.com/cferdinandi/smooth-scroll),
+Copyright (c) 2019 Chris Ferdinandi.
+Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Gumshoejs](http://github.com/cferdinandi/gumshoe),
+Copyright (c) 2019 Chris Ferdinandi.
+Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/),
+Copyright (c) 2010 "Cowboy" Ben Alman.
+jQuery throttle / debounce is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav),
+Copyright (c) 2015 Luke Jackson.
+GreedyNav.js is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Jekyll Group-By-Array](https://github.com/mushishi78/jekyll-group-by-array),
+Copyright (c) 2015 Max White <mushishi78@gmail.com>.
+Jekyll Group-By-Array is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [@allejo's Pure Liquid Jekyll Table of Contents](https://allejo.io/blog/a-jekyll-toc-in-liquid-only/),
+Copyright (c) 2017 Vladimir Jimenez.
+Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Lunr](http://lunrjs.com),
+Copyright (c) 2018 Oliver Nightingale.
+Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
