@@ -3,6 +3,13 @@ title: "Algorithm, programmers, 42576(완주하지못한선수), 해싱"
 date: 2019-10-30 12:30:28 -0400
 categories: Algorithm문제풀이
 tags : [Algorithm, 문제풀이, 해싱]
+title: "Data Structure, JAVA, array/arraylist/linkedlist"
+date: 2019-10-09 13:30:28 -0400
+categories: Data Structure
+tags : [Data Structure, JAVA]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 
 ##### 빠른 풀이
