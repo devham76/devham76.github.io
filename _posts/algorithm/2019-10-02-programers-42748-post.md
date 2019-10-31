@@ -2,7 +2,7 @@
 title: "Algorithm, programmers, 42748(K번째 수)"
 date: 2019-10-02 22:30:28 -0400
 categories: Algorithm
-tags : [Algorithm, JAVA, 순열, 퀵정렬, 문제풀이]
+tags : [Algorithm, 순열, 퀵정렬 ]
 ---
 정렬, 난이도 하
 
