@@ -114,8 +114,8 @@ author:
   email            :
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-       #url: "devham76@gmail.com"
+      #icon: "fas fa-fw fa-envelope-square"
+       url: "devham76@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -287,7 +287,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      _profile: true
       read_time: true
       comments:  true
       share: true
