@@ -1,8 +1,8 @@
 ---
 title: "기술 면접 준비-기본"
 date: 2019-10-22 15:00:28 -0400
-categories: 면접
-tags : [면접]
+categories: [summary]
+tags : [summary, JAVA]
 ---
 
 >JAVA 관련 예상 질문
