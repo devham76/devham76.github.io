@@ -6,7 +6,6 @@ tags : [Data Structure, JAVA]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
-layout: category
 ---
 Array / ArrayList / LinkedList
 =============
@@ -53,6 +52,7 @@ Array / ArrayList / LinkedList
 - <u>삽입,삭제를 빠르게 수행 할 수 있다.</u>
 - 무한 개수의 자료 삽입 가능. (메모리 용량 무한정 이라면)
 - 검색 : 순차 접근만이 가능해서 ArrayList보다 느리다.
+
 ---
 ## Reference
 <http://blog.naver.com/PostView.nhn?blogId=sangrime&logNo=220622445166>
