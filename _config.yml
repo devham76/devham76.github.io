@@ -113,7 +113,7 @@ author:
   location         : "Seoul/Korea"
   links:
     - label: "Email"
-      icon: "far fa-envelope"
+      icon: "fas fa-fw fa-link"
       url: "devham76@gmail.com"
   - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -125,7 +125,7 @@ author:
 footer:
   links:
     - label: "Email"
-      icon: "far fa-envelope"
+      icon: "fas fa-fw fa-link"
       url: "devham76@gmail.com"
   - label: "GitHub"
       icon: "fab fa-fw fa-github"
