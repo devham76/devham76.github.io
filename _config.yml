@@ -114,7 +114,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-link"
-      url: "devham76@gmail.com"
+      url: "mailto:devham76@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devham76"
@@ -126,7 +126,7 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-link"
-      url: "devham76@gmail.com"
+      url: "mailto:devham76@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devham76"
