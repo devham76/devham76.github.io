@@ -292,5 +292,4 @@ defaults:
       comments:  true
       share: true
       related: true
-      author_profile: true
 remote_theme : mmistakes/minimal-mistakes
