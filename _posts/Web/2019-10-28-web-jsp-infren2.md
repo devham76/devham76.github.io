@@ -3,6 +3,9 @@ title: "WEB, jsp, 자바빈"
 date: 2019-10-28 15:40:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 ### 빈(bean) 이란?
 - 반복적인 작업을 효율적으로 하기 위해 사용
