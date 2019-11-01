@@ -13,4 +13,4 @@ main:
   - title: "Tags"
     url: /tags/
   - title: "About me"
-    url: /aboutMe/
+    url: https://mmistakes.github.io/minimal-mistakes/aboutMe/
