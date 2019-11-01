@@ -112,39 +112,27 @@ author:
   bio              : "주니어 개발자의 삽질이야기"
   location         : "Seoul/Korea"
   links:
-    - label: "Made Mistakes"
-      icon: "fas fa-fw fa-link"
-      url: "https://mademistakes.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/mmistakes"
-    - label: "GitHub"
+    - label: "Email"
+      icon: "far fa-envelope"
+      url: "devham76@gmail.com"
+  - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/mmistakes"
+      url: "https://github.com/devham76"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/mmistakes"
+      url: "https://instagram.com/traveller_ham"
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "devham76@gmail.com"
+      icon: "far fa-envelope"
+      url: "devham76@gmail.com"
+  - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/devham76"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://www.instagram.com/traveller_ham/"
+      url: "https://instagram.com/traveller_ham"
 
 
 # Reading Files
