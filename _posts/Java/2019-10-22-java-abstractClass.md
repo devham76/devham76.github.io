@@ -1,5 +1,5 @@
 ---
-title: "JAVA, 추상 클래스&템프릿 메서드"
+title: "JAVA, 추상 클래스&템플릿 메서드"
 date: 2019-10-22 15:20:28 -0400
 categories: JAVA
 tags : [JAVA,java기본개념]
@@ -12,6 +12,7 @@ toc_icon: "cog"
 - 추상 메서드를 포함한 클래스
 - 추상 메서드는 구현코드 없이 메서드의 선언만 있음
 - <b>동일한 메서드를 클래스의 상태에 따라 다르게 구현</b>하게 될때 <b>추상 클래스</b>를 사용한다
+
 ```java
 // 선언만 있는 추상 메서드
 abstract int add(int x, int y);
@@ -19,6 +20,7 @@ abstract int add(int x, int y);
 // {}부분이 구현 내용임, 추상 메서드 아님
 int add(int x, int y){}
 ```
+
 - abstract 예약어 사용
 - <b>추상 클래스는 new (인스턴스 화)할 수 없음</b>
 - 상속을 하기 위해 만든다 (혼자 돌아가기 위한 클래스는 아니다)
@@ -59,6 +61,7 @@ NoteBook display
   - ex) Car.run()
 - <u>하위 클래스에서 <b>다르게 구현</b>되어야 하는 부분은 추상 메서드로 선언</u>해서 하위 클래스가 구현하도록 함
   - ex) Car.drive(), Car.stop()
+
 ```java
 package template;
 
