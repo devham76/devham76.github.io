@@ -1,6 +1,6 @@
 ---
-title: "WEB, introduction to react"
-date: 2019-11-02 15:40:28 -0400
+title: "WEB, ReactJS, introduction to react"
+date: 2019-11-25 15:40:28 -0400
 categories: ReactJS노마드코더
 tags : [WEB, ReactJS, FrontEnd]
 toc: true
