@@ -1,5 +1,5 @@
 ---
-title: "Algorithm, programmers, 회의실배정(1931))"
+title: "Algorithm, boj, 회의실배정(1931))"
 date: 2019-11-14 13:00:28 -0400
 categories: Algorithm
 tags : [Algorithm, 탐욕법, sort]
