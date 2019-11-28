@@ -26,18 +26,18 @@ tags : [WEB, JSP]
 ---
 
 #### requset 객체
-| 메소드| 설명 
-|:---:|:---:|
-|getMethod()|get,post방식 구분
-|getSession()|세션 객체 얻기
-|getRequestURL()|요청 url얻기
+| 메소드 | 설명|
+|---|:---:|
+|getMethod() | get,post방식 구분
+|getSession() | 세션 객체 얻기
+|getRequestURL() | 요청 url얻기
 
 #### parameter 메소드 (request 객체)
-| 메소드| 설명
-|:---:|:---:|
-|getParameter(String name)| name에 해당하는 파라메터값 구함
-|getParameterNames()| 모든 파라메터값 구함
-|<b>getParameterValues(String name)</b>| name에 해당하는 파라메터 값 구함
+| 메소드| 설명|
+|---|:---:|
+| getParameter(String name) | name에 해당하는 파라메터값 구함
+| getParameterNames() | 모든 파라메터값 구함
+| <b>getParameterValues(String name)</b>| name에 해당하는 파라메터 값 구함
 
 #### reponse 객체
 | 메소드| 설명
