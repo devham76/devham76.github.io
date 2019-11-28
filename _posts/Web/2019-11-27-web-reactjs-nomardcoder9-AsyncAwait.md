@@ -28,6 +28,7 @@ fetch(url)
 
 #### 변경 후 코드
 - 함수안에 집어 넣어서 함수를 호출하도록 했다.
+
 ```js
 _callApi = () =>{
   const url = "https://yts.lt/api/v2/list_movies.json?sort_by=rating";
@@ -40,7 +41,9 @@ _callApi = () =>{
 
 #### Async & Await
 - await 하는 것이란 ?
- - const movies = await this._callApi() : _callApi()함수가 끝나는것을 기다리고 결과 값을 movies에 삽입한다.
+- const movies = await this._callApi() : _callApi()함수가 끝나는것을 기다리고 결과 값을 movies에 삽입한다.
+
+
 ```js
 componentDidMount() {
   this._getMovies();
@@ -48,9 +51,9 @@ componentDidMount() {
 
 // 비동기화 함수
 _getMovies = async() => {
-  // await를 하는 것이란? call api기능이 끝나는것을 기다리고
-  // 끝나면 그 결과값을 movies에 넣는다
+  // call api기능이 끝나는것을 기다리고 끝나면 그 결과값을 movies에 넣는다
   const movies = await this._callApi()
+
   // 해당부분은 callApi 작업이 완료 되기 전까지는 실행되지 않는다
   this.setState({
      // 모던 자바스크립트의 표현, 이전표현 => movies : movies
@@ -60,6 +63,7 @@ _getMovies = async() => {
 ```
 
 ---
+
 ### 전체 코드
 ```js
 import React, { Component } from 'react';
