@@ -7,18 +7,22 @@ tags : [WEB, JSP]
 #### 지시자
 - jsp 페이지의 전체적인 속성을 지정할 때 사용한다
 1. page : 해당 페이지 전체적인 속성 지정
-    - 사용되는 언어 / import문 등을 많이 사용
+    - 사용되는 언어, import문 등을 많이 사용
+
 ```java
 <%@page import = "java.util.*" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset="EUC-KR"
     pageEncoding="EUC-KR"%>
 ```
+
+
 2. include : 별도의 페이지를 현재 페이지에 삽입
 ```java
 <%@ include file="include.jsp"%>
 ```
 
 3. taglib : 태그라이브러리의 태그 사용
+
 ---
 
 #### requset 객체
