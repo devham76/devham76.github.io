@@ -26,7 +26,7 @@ tags : [WEB, JSP]
 ---
 
 #### requset 객체
-| 메소드| 설명
+| 메소드| 설명 
 |:---:|:---:|
 |getMethod()|get,post방식 구분
 |getSession()|세션 객체 얻기
