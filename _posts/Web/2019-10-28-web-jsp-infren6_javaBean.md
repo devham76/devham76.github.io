@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp, 자바빈"
+title: "WEB, 실전jsp강좌, 자바빈"
 date: 2019-10-28 15:40:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]
@@ -19,29 +19,48 @@ toc_icon: "cog"
 
 - 그런 것을 피하기 위해 JSP 페이지의 로직부분을 모듈화해서 분리함으로써 프로그램의 효율을 높이는 것이 사용하는 목적입니다.
 
+![javabean](https://user-images.githubusercontent.com/55946791/70423002-0cd3e100-1ab0-11ea-8b49-17cec74be359.jpg)
+
 ---
 ### 빈의 사용
-##### useBean
+#### <jsp:useBean>
 - 특정 Bean을 사용한다고 명시 할때 사용
 
 ```java
 <jsp:useBean id="student" calss="com.javalec.ex.Student" scope="page" />
-// id : 참조변수. scope : 범위
+
+// 위의 액션태그를 코드로 바꾸면 아래와 같다
+
+Student student = (Student)reqeust.getAttribute("student");
+if (student == null){
+	student = new Student();
+	request.setAttribute("student", student);
+}
 ```
-##### scope
+
+- id : jsp페이지에서 자바빈 <u>객체에 접근 할때 사용하는 이름</u>
+- class : 패키지 이름을 포함한 자바빈 클래스의 완전한 이름을 입력
+- scope : 자바빈 <u>객체가 저장될 영역</u>을 지정
+
+#### scope
 - page : 생성된 페이지 내에서만 사용 가능
 - request : 요청된 페이지 내에서만 사용 가능
 - session : 웹브라우저 생명주기와 동일하게 사용가능
 - application : 웹 어플리케이션 생명주기와 동일하게 사용 가능
-##### setProperty
+
+#### <jsp:setProperty>
 - 데이터 값 설정시 사용
 
 ```java
 <jsp:setProperty name="student" property="name" value="로꼬" />
 // name : 빈이름, property : 속성이름, value : 데이터 값
-```
 
-##### getProperty
+<jsp:setProperty name="student" property="*" />
+```
+- property속성의 값을 *로 지정하면 프로퍼티의 값을 같은 이름을 갖는 파라메터의 값으로 설정한다.
+
+
+#### <jsp:getProperty>
 - 데이터 값을 가져올때 사용
 ```java
 <jsp:getProperty name="student" property="name"/>
@@ -105,4 +124,6 @@ public class Student {
 ---
 ## Reference
 
-<https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-jsp-%EA%B0%95%EC%A2%8C/lecture/1175>
+- <https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-jsp-%EA%B0%95%EC%A2%8C/lecture/1175>
+
+- <https://all-record.tistory.com/105>

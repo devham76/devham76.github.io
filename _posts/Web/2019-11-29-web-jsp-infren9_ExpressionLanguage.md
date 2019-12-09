@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp, ExpressionLanguage"
+title: "WEB, 실전jsp강좌, ExpressionLanguage"
 date: 2019-11-29 15:40:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]
@@ -92,7 +92,7 @@ request.setAttribute("request_name", "request_value");
 	sessionScope : ${sessionScope.session_name}<br>
 	pageScope : ${pageScope.page_name}<br>
 	requestScope : ${requestScope.request_name}<br>
-	
+
 ```
 
 

@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp, 액션태그"
+title: "WEB, 실전jsp강좌, 액션태그"
 date: 2019-10-24 15:30:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]

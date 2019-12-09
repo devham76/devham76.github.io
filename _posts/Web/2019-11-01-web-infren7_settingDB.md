@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp & database 이용"
+title: "WEB, 실전jsp강좌 & database 이용"
 date: 2019-11-01 15:40:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]

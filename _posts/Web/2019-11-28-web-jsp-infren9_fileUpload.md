@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp, File Upload"
+title: "WEB, 실전jsp강좌, File Upload"
 date: 2019-11-28 15:40:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]

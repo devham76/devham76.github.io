@@ -1,5 +1,5 @@
 ---
-title: "WEB, servlet, 초기 파라메터/데이터공유/웹앱감시"
+title: "WEB, 실전jsp강좌, 초기 파라메터/데이터공유/웹앱감시"
 date: 2019-10-24 14:30:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, SERVLET]

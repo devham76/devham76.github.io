@@ -1,5 +1,5 @@
 ---
-title: "WEB, servlet, servlet-form태그"
+title: "WEB, 실전jsp강좌, servlet-form태그"
 date: 2019-10-24 14:30:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, SERVLET]

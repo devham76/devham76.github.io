@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp & DAO/DTO"
+title: "WEB, 실전jsp강좌 & DAO/DTO"
 date: 2019-11-02 15:40:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]

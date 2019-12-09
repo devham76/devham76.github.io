@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp, 예외처리"
+title: "WEB, 실전jsp강좌, 예외처리"
 date: 2019-10-28 15:30:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, JSP]

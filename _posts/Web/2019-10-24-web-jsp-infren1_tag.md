@@ -1,5 +1,5 @@
 ---
-title: "WEB, jsp, 태그/동작원리/내부객체"
+title: "WEB, 실전jsp강좌, 태그/동작원리/내부객체"
 date: 2019-10-24 14:30:28 -0400
 categories: 실전jsp강좌
 tags : [WEB, SERVLET]
