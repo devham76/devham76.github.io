@@ -2,7 +2,7 @@
 title: "JAVA, Comparable / Comparator"
 date: 2019-10-09 13:40:28 -0400
 categories: JAVA
-tags : [JAVA, java응용]
+tags : [JAVA, java기본개념]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
