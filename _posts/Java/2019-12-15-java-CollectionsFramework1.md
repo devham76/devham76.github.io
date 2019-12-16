@@ -1,5 +1,5 @@
 ---
-title: "JAVA, Collections Framework"
+title: "JAVA의 정석, Chapter 11 Collections Framework"
 date: 2019-12-15 13:40:28 -0400
 categories: JAVA
 tags : [JAVA, java기본개념, CollectionsFramework]
