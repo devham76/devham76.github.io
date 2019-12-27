@@ -1,6 +1,6 @@
 ---
 title: "Algorithm, programmers, 카카오2019(길 찾기 게임-42892)"
-date: 2019-11-02 13:00:28 -0400
+date: 2019-12-27 13:00:28 -0400
 categories: Algorithm
 tags : [Algorithm, 트리, 이진트리, Comparator ]
 toc: true
@@ -109,7 +109,7 @@ public class kakao_2019_Tree_findWay {
 
 	public static void main(String[] args) {
 
-		int[][] nodeinfo = {{5, 3}, {11, 5}, {13, 3}, {3, 5}, {6, 1},{1, 3}, {8, 6}, {7, 2}, {2, 2}};
+		//int[][] nodeinfo = {{5, 3}, {11, 5}, {13, 3}, {3, 5}, {6, 1},{1, 3}, {8, 6}, {7, 2}, {2, 2}};
 		kakao_2019_Tree_findWay k = new kakao_2019_Tree_findWay();
 		k.solution(nodeinfo);
 	}
