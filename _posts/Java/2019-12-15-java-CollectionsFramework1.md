@@ -1,5 +1,5 @@
 ---
-title: "JAVA의 정석, Chapter 11 Collections Framework"
+title: "JAVA, Collections Framework"
 date: 2019-12-15 13:40:28 -0400
 categories: JAVA
 tags : [JAVA, java기본개념, CollectionsFramework]
@@ -59,6 +59,7 @@ toc_icon: "cog"
 ## ArrayList vs LinkedList
 - 순차적으로 추가/삭제 하는 경우 : ArrayList 가 빠르다
 - 중간 데이터를 추가/삭제 하는 경우 : LinkedList가 빠르다
+
 |컬렉션| 읽기(접근시간) | 추가/삭제 | 비고
 |--|--|--|--|
 |ArrayList | 빠르다 | 느리다 | 순차적인 추가삭제는 더 빠르다. <br>비효율적인 메모리 사용
