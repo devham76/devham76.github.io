@@ -32,4 +32,4 @@ toc_icon: "cog"
 
 ---
 ## Reference
-<https://cwondev.tistory.com/15>
+- [comparable, comparator](https://cwondev.tistory.com/15)

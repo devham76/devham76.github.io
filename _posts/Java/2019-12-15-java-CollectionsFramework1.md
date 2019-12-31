@@ -12,16 +12,18 @@ toc_icon: "cog"
 - Framework : 표준화된 프로그래밍 방식
 - JDK1.2부터 다양한 종류의 컬렉션 클래스가 추가되고 <u>모든 컬렉션 클래스를 표준화된 방식으로 다룰</u> 수 있도록 체계화되었다.
 
+![collection](https://user-images.githubusercontent.com/55946791/71610408-1abee280-2bd4-11ea-8a3a-fea2d9bfd4bf.jpg)
+
 ## 1.1 컬렉션 프레임웍의 핵심 인터페이스
 ![컬렉션 프레임워크 핵심 인터페이스 상속계층도](https://user-images.githubusercontent.com/55946791/70857702-04a7f580-1f37-11ea-8273-437fb72f97ce.jpg)
 - 인터페이스 List와 Set을 구현한 컬렉션 클래스들은 서로 많은 공통부분이 있어서 공통부분을 뽑아 Collection인터페이스를 정의 할 수있었다.
 - 컬렉션 프레임웍의 핵심 인터페이스와 특징
 
-|인터페이스|특징
-|--|--|
-|List| <b>순서가 있는</b> 데이터의 집합, <b>데이터 중복</b>을 허용한다. <br>예) 대기자 명단 <br>구현클래스 : ArrayList, LinkedList, Stack, Vector등
-|Set| <b>순서를 유지하지 않는</b> 데이터의 집합. <b>데이터의 중복을 허용하지 않는다</b> <br>예) 양의 정수 집합, 소수의 집합 <br>구현클래스 : HashSet, TreeSet
-|Map|<b>key와 value의 쌍</b>으로 이러우진 데이터의 집합. <b>순서 유지 x, 키 중복 x, 값 중복 o</b> <br>예) 우편번호, 지역번호(전화번호) <br>구현 클래스 : HashMap, TreeMap, Hashtable, Properties등
+|인터페이스|특징| 구현 클래스
+|--|--|--|
+|List| <b>순서가 있는</b> 데이터의 집합, <b>데이터 중복</b>을 허용한다. <br>예) 대기자 명단| ArrayList, Vector, LinkedList, Stack
+|Set| <b>순서를 유지하지 않는</b> 데이터의 집합. <b>데이터의 중복을 허용하지 않는다</b> <br>예) 양의 정수 집합, 소수의 집합 |HashSet, TreeSet
+|Map|<b>key와 value의 쌍</b>으로 이러우진 데이터의 집합. <b>순서 유지 x, 키 중복 x, 값 중복 o</b> <br>예) 우편번호, 지역번호(전화번호) | HashMap, TreeMap, Hashtable, Properties
 
 ### Collection 인터페이스
 - List와 Set의 조상인 Collection 인터페이스에는 컬렉션을 다루는데 가장 기본적인 메서드를 정의하고 있다
@@ -55,6 +57,10 @@ toc_icon: "cog"
 - <u>불연속적으로 존재하는 데이터를 서로 연결(link)한 형태로 구성되어 있다</u>
 - <u>단점 : 이동방향이 단방향이기 때문에 다음 요소에 대한 접근은 쉽지만 이전에 대한 접근은 어렵다.</u> (더블 링크드 리스트로 단점 해결)
 - 실제로 LinkedList클래스는 이름과 달리 '더블 링크드 리스트'로 구현이 되어 있는데, 이는 링크드 리스트의 단점인 낮은 접근성을 높이기 위한것이다.
+- 큐, 양방향 큐, 스택 만들때 사용
+
+## ArrayList vs Vector
+- Vector : 데이터에 동시 접속이 발생했을때 처리할 수 있다 (ArrayList의 구형버전, 잘 안쓰임)
 
 ## ArrayList vs LinkedList
 - 순차적으로 추가/삭제 하는 경우 : ArrayList 가 빠르다
@@ -88,6 +94,7 @@ toc_icon: "cog"
 ### Iterator
 - 컬렉션 프레임워크에서는 <u>컬렉션에 저장된 요소들을 읽어오는 방법을 표준화</u>하였다.
 - 인터페이스
+
 ```java
 pulic iterface Iterator {
   boolean hasNext();  // 읽어올 요소가 남아있는지?
@@ -102,6 +109,7 @@ public interface Collection {
 ```
 
 - 사용예시
+
 ```java
 List list = new ArrayList();
 Iterator it = list.iterator();
@@ -123,9 +131,45 @@ Iterator it = map.keySet().iterator();
 - Iterator는 단방향으로만 이동하기 때문에 컬렉션의 마지막 요소에 다다르면 더이상 사용x
 - ListIterator는 양방향으로 이동하기 때문에 요소간의 이도잉 자유롭다. <u>hasNext()나 hasPrevious()</u>를 호출해서 이동 할 수 있는지 확인해야 한다.
 
+---
+## SET
+: 집합을 정의 하며 요소의 중복을 허용하지 않는다.
 
+### HashSet
+- 가장 빠른 임의 접근속도
+- 순서를 예측할 수 없다
+
+### LinkedHashSet
+- 추가된 순서, 또는 가장 최근에 접근한 순서대로 접근 가능
+
+### TreeSet
+- 정렬된 순서대로 보관하며 정렬 방법을 지정할 수 있다
+
+---
+
+## MAP
+:key,value 의 쌍으로 연관지어 저장, 순서없음
+
+### HashMap
+- 중복x 순서x
+- key,value null허용o
+- 멀테쓰레드에서 사용x, 멀티쓰레드에서는 HashTable을 쓴다
+
+### HashTable
+- HashMap보다 느리지만, 동기화 지원
+- key,value null허용x
+- 멀티쓰레드에서 사용
+
+### TreeMap
+- 이진검색트리 형태로 key,value쌍으로 이루어짐
+- 정렬된 순서로 저장(오름차순, 저장시간 다소 길다)하므로 빠른 검색
+- <b>key를 기준으로 정렬할 경우 유용</b>, 정렬기준 : 숫자> 대문자 > 소문자 > 한글
+
+### LinkedHashMap
+- HashMap과 유사
+- Map에 있는 엔트리들의 연결 리스트를 유지하므로 입력한 순서대로 반복 가능
 
 ---
 ## Reference
 - 자바의 정석(남궁성)
-- [comparable, comparator](https://cwondev.tistory.com/15)
+- <https://hackersstudy.tistory.com/26>
