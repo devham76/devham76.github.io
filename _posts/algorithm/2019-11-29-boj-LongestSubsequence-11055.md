@@ -88,6 +88,6 @@ public class test11055_dp_BiggesSubsequence {
 ## Reference
 - [문제보러가기](https://www.acmicpc.net/problem/11055)
 - [영상 풀이](https://www.youtube.com/watch?v=CE2b_-XfVDk)
-- [글 풀이](https://stack07142.tistory.com/56)
+- [글 풀이](https://stack07142.tistory.com/56                                                                    )
 
 ---

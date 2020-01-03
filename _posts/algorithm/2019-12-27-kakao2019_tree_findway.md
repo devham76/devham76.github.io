@@ -2,7 +2,7 @@
 title: "Algorithm, programmers, 카카오2019(길 찾기 게임-42892)"
 date: 2019-12-27 13:00:28 -0400
 categories: Algorithm
-tags : [Algorithm, 트리, 이진트리, Comparator ]
+tags : [Algorithm, 트리, 이진트리, Comparator, hard ]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
@@ -109,7 +109,7 @@ public class kakao_2019_Tree_findWay {
 
 	public static void main(String[] args) {
 
-		//int[][] nodeinfo // github push 오류로 예제코드는 주석처리함 
+		//int[][] nodeinfo // github push 오류로 예제코드는 주석처리함
 		kakao_2019_Tree_findWay k = new kakao_2019_Tree_findWay();
 		k.solution(nodeinfo);
 	}
