@@ -1,8 +1,8 @@
 ---
-title: "JAVA, Object 클래스"
+title: "Spring, Maven"
 date: 2020-01-07 13:40:28 -0400
 categories: JAVA
-tags : [JAVA, java기본개념, ObjectClass]
+tags : [spring]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
