@@ -1,8 +1,8 @@
 ---
 title: "NetWork, TCP 3,4-way HandSaking"
 date: 2020-01-08 15:40:28 -0400
-categories: [network]
-tags : [network, tcp]
+categories: [NetWork]
+tags : [NetWork, tcp]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"

@@ -1,8 +1,8 @@
 ---
 title: "NetWork, TCP & UDP"
 date: 2020-01-08 15:05:28 -0400
-categories: [network]
-tags : [network, tcp, udp]
+categories: [NetWork]
+tags : [NetWork, TCP, UDP]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"

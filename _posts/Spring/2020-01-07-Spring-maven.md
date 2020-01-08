@@ -1,8 +1,8 @@
 ---
 title: "Spring, Maven"
 date: 2020-01-07 13:40:28 -0400
-categories: JAVA
-tags : [spring]
+categories: Spring
+tags : [Spring]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
