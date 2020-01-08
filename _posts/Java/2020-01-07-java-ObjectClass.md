@@ -15,6 +15,10 @@ toc_icon: "cog"
 - 모든 클래스는 Object클래스의 일부 메서드를 재정의 하여 사용할 수 있음
 - import하지 않아도 컴파일러가 자동으로 import해준다
 
+- 예제: toString(), equals(), hashCode(), clone()
+	- equals() : 논리적으로 동일 / cf) == : 물리적으로 동일(주소)
+	- hashCode() : 인스턴스 저장된 가상머신의 주소를 10진수로 반환
+
 
 ---
 ### 예제

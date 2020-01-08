@@ -13,6 +13,9 @@ toc_icon: "cog"
 - 프로젝트 전체적인 라이프 사이클을 관리하는 도구이며 최근에는 메이븐과 같은 라이브러리 관리 프로그램인 gradle이 많이 사용되고 있다.
 
 - pom.xml을 공유하면 개발환경이 다르더라도 에러발생하지 않고 정상적으로 실행된다.
+
+
+
 ---
 ## Reference
 - <https://jerryjerryjerry.tistory.com/63>
