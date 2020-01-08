@@ -132,7 +132,7 @@ Iterator it = map.keySet().iterator();
 - ListIterator는 양방향으로 이동하기 때문에 요소간의 이도잉 자유롭다. <u>hasNext()나 hasPrevious()</u>를 호출해서 이동 할 수 있는지 확인해야 한다.
 
 ---
-## SET
+## 2. SET
 : 집합을 정의 하며 요소의 중복을 허용하지 않는다.
 
 ### HashSet
@@ -147,7 +147,7 @@ Iterator it = map.keySet().iterator();
 
 ---
 
-## MAP
+## 3. MAP
 :key,value 의 쌍으로 연관지어 저장, 순서없음
 
 ### HashMap
@@ -166,8 +166,38 @@ Iterator it = map.keySet().iterator();
 - <b>key를 기준으로 정렬할 경우 유용</b>, 정렬기준 : 숫자> 대문자 > 소문자 > 한글
 
 ### LinkedHashMap
-- HashMap과 유사
-- Map에 있는 엔트리들의 연결 리스트를 유지하므로 입력한 순서대로 반복 가능
+- HashMap + LinkedList : put을 통해 입력한 순서대로 key가 보장된다.
+- [예제]
+```java
+// 둘의 속도차이는 거의 없다
+LinkedHashMap hm = new LinkedHashMap();
+hm.put("1","라인");
+hm.put("2","카카오");
+hm.put("3","네이버");
+
+LinkedHashMap Lhm = new LinkedHashMap();
+Lhm.put("1","라인");
+Lhm.put("2","카카오");
+Lhm.put("3","네이버");
+```
+- hm결과 / 순서보장x
+
+|key|value|
+|--|--|
+|2|카카오|
+|1|라인|
+|3|네이버|
+
+- Lhm결과 / 순서보장o
+
+|key|value|
+|--|--|
+|1|라인|
+|2|카카오|
+|3|네이버|
+
+
+
 
 ---
 ## Reference
