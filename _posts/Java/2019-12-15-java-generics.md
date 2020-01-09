@@ -55,11 +55,11 @@ class Box{
 
 ### 지네릭스의 제한
 1. <u>static멤버에 타입 변수 T를 사용할 수 없다</u>
-  - 대입된 타입의 종류에 관계없이 동일한 것이어야 하기 때문이다.
+    - 대입된 타입의 종류에 관계없이 동일한 것이어야 하기 때문이다.
 2. <u>지네릭 배열을 생성 할 수 없다</u>
-  - T[] tmpArr = new T[itemArr.length]; (x)
-  - new 연산자 때문인데, 컴파일 시점에 타입 T가 뭔지 정확하게 알아야 한다
-  - 그런데 컴파일 시점에는 T가 어떤 타입이 될지 알 수 없기 때문에 불가능 하다.
+    - T[] tmpArr = new T[itemArr.length]; (x)
+    - new 연산자 때문인데, 컴파일 시점에 타입 T가 뭔지 정확하게 알아야 한다
+    - 그런데 컴파일 시점에는 T가 어떤 타입이 될지 알 수 없기 때문에 불가능 하다.
 
 ## 1.3 지네릭 클래스의 객체 생성과 사용
 1. 참조변수와 생성자에 대입된 타입이 일치해야 한다
@@ -125,6 +125,92 @@ class Juicer {
 - 지네릭 <b>클래스</b>에 정의된 타입 메서드 != 지네릭 <b>메서드</b>에 정의된 타입 매개변수
 - <b>static메서드에 지네릭 타입을 선언하고 사용하는 것 가능</b>하다
 - <u>지역 변수를 선언한 것과 같다</u>고 생각하면 이해하기 쉬운데, 이 타입 매개변수는 메서드 내에서만 지역적으로 사용될 것이므로 메서드가 <u>static이건 아니건 상관없다</u>
+
+---
+## 예제 !
+
+```java
+package GenericPart;
+
+public class GenericPrinterTest {
+
+	public static void main(String[] args) {
+
+		GenericPrinter<Powder> powderPrinter = new GenericPrinter<>();	// Powder 타입을 생성할 3d프린터를 만들었다
+		Powder powder = new Powder();	// 타입을 생성했다
+		powderPrinter.setMaterial(powder);	// 생성된 타입을 넣어줘야 한다
+		System.out.println(powderPrinter);
+		powderPrinter.doPrinting();
+
+		GenericPrinter<Plastic> plasticPrinter = new GenericPrinter<>();
+		Plastic plastic = new Plastic(); // 재료생성
+		plasticPrinter.setMaterial(plastic); // 3d프린터에 재료 대입
+		//plasticPrinter.setMaterial(powder); 오류발생 !! 처음에 3d프린터 생성시의 재료와 다르다
+		System.out.println(plasticPrinter);
+		plasticPrinter.doPrinting();
+
+		// metrial을 상속받지 않았기 때문에 water은 재료로 사용 불가능
+		//GenericPrinter<Water> waterPrinter = new GenericPrinter<>();		
+	}
+}
+```
+
+```java
+package GenericPart;
+
+// 3d프린터, 재료는 다양하다
+// T -> 실제로 사용할때 재료를 정하자라는 의미 , 실제로 사용될때 재료가 정해진다
+
+// 재료를 한정짓기 위해 extends Meterial한다, 상속받은 것만 사용가능!!!!!
+public class GenericPrinter<T extends Meterial> {
+
+	private T material;
+
+	public T getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(T material) {
+		this.material = material;
+	}
+
+	public String toString() {
+		return material.toString();
+	}
+
+	public void doPrinting() {
+		material.doPrinting();
+	}
+
+}
+```
+
+```java
+package GenericPart;
+
+public abstract class Meterial {
+
+	public abstract void doPrinting();
+}
+```
+
+```java
+package GenericPart;
+
+public class Plastic extends Meterial{
+
+	// 오버라이딩, 부모 함수를 나에 맞게 재정의
+	public String toString() {
+		return "재료는 plastic입니다";
+	}
+
+	// 부모의 추상메서드는 무조건 구현해야한다
+	@Override
+	public void doPrinting() {
+		System.out.println("plastic으로 프린팅한다");
+	}
+}
+```
 
 
 ---

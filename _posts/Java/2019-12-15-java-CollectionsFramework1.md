@@ -8,11 +8,14 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
 # 1.컬렉션 프레임웍
+- <u>프로그램 구현에 필요한 자료구조와 알고리즘을 구현해 놓은 라이브러리</u>
 - Collection : 데이터 그룹
 - Framework : 표준화된 프로그래밍 방식
 - JDK1.2부터 다양한 종류의 컬렉션 클래스가 추가되고 <u>모든 컬렉션 클래스를 표준화된 방식으로 다룰</u> 수 있도록 체계화되었다.
 
 ![collection](https://user-images.githubusercontent.com/55946791/71610408-1abee280-2bd4-11ea-8a3a-fea2d9bfd4bf.jpg)
+- Collection :하나의 객체를 어떻게 관리할것이냐
+- Map : 쌍으로 이루어진 객체를 어떻게 관리할것이냐
 
 ## 1.1 컬렉션 프레임웍의 핵심 인터페이스
 ![컬렉션 프레임워크 핵심 인터페이스 상속계층도](https://user-images.githubusercontent.com/55946791/70857702-04a7f580-1f37-11ea-8273-437fb72f97ce.jpg)

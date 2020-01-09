@@ -1,8 +1,8 @@
 ---
 title: "어떤 언어부터 배워야할까? 5개 언어. 5분 개념탑재."
 date: 2019-09-30 15:30:28 -0400
-categories: [interest]
-tags : [interest, youtube]
+categories: [STUDY]
+tags : [STUDY, youtube]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
