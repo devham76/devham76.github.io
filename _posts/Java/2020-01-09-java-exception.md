@@ -20,6 +20,21 @@ toc_icon: "cog"
   - 읽으려는 파일이 없다, n/w이나 소켓연결 오류 등
   - 자바 프로그램에서는 예외에 대한 처리를 수행함
 
+## 예외 클래스
+![exception](https://user-images.githubusercontent.com/55946791/72050784-4ee98000-3305-11ea-9cf8-ee01c246b5c8.JPG)
+
+- RuntimeExeption : 0으로 나눴다 등
+- IOException : 파일/소켓이 없다 등
+
+## 예외 처리
+- try-catch / try-catch-finally
+  - try : 예외 발생 가능 코드 부분
+  - catch : try에서 예외발생시 수행되는 부분
+  - finally : 예외 발생 여부에 상관 없이 항상 수행되는 부분, 리소스를 정리하는 코드를 주로 씀
+
+
+
+
 ---
 ## Reference
 - fastcampus
