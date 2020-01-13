@@ -118,4 +118,4 @@ public String initUpdateOwnerForm(@PathVariable("ownerId") int ownerId, Model mo
 
 ---
 ## Reference
-- [fastcampus] 예제로 배우는 스프링 입문 | 백기선님 강좌
+- [inflearn] 예제로 배우는 스프링 입문 | 백기선님 강좌
