@@ -58,10 +58,12 @@ public void testPay(){
 ```
 
 ---
-## AOP 적용 예제
-<h2>@LogExecutionTime 으로 메소드 처리 시간 로깅하기</h2>
 
+### AOP 적용 예제
+### @LogExecutionTime 으로 메소드 처리 시간 로깅하기
 - @LogExecutionTime 에노테이션 (어디에 적용할지 표시 하는 용도) 생성
+
+- LogExecutionTime.java
 
 ```java
 // 이 에노테이션을 메소드에 사용하겠다
@@ -77,7 +79,6 @@ public @interface LogExecutionTime {
 ```java
 
 @Component // Bean으로 등록해준다
-
 @Aspect
 public class LogAspect {
     Logger logger = LoggerFactory.getLogger(LogAspect.class);
@@ -106,7 +107,7 @@ public class LogAspect {
 
 ```java
 @GetMapping("/owners/{ownerId}/edit")
-  @LogExecutionTime
+@LogExecutionTime
 public String initUpdateOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
   Owner owner = this.owners.findById(ownerId);
   model.addAttribute(owner);
