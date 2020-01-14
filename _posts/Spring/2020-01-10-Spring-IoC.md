@@ -1,26 +1,75 @@
 ---
-title: "Spring, IoC"
+title: "Spring, DI, IoC"
 date: 2020-01-10 13:40:28 -0400
 categories: Spring
-tags : [Spring, IoC]
+tags : [Spring, DI, IoC]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
-## Dependency ( 의존성 )
-- <b>객체지향언어에서 두 클래스 간의 관계</b>
+
+## Dependency Injection
+- 의존성이 삽입된다는 의미로 IoC를 DI라는 표현으로 사용합니다.
+### Dependency ( 의존성 )
+- <b>객체지향언어에서 두 클래스 간의 협력하는 관계</b>
 - 일반적으로 둘 중 하나가 다른 하나를 어떤 용도를 위해 사용함
 
 ### Dependency는 위험하다
 - 하나의 모듈(클래스)이 바뀌면 다른 모듈까지 변경이 이루어지 지기 때문에 위험하다
 - 테스트 가능한 어플을 만들때 의존성이 있으면 유닛테스트 작성이 어렵다
     - 유닛테스트의 목적 자체가 다른 모듈로부터 독립적으로 테스트하는 것을 요구하기 때문이다(Mock객체로 대체가능하다)
+- Controller는 Repository에 의존한다 (ioc 구현전)
+
 
 ---
 
 ## IoC
 - Inversion of Control ; 뒤바뀐 제어권
+- 스프링은 두가지( @Component, @Autowired ) 어노테이션을 지원해서 IoC를 구현한다
+- @Component
+- @Autowired
+- 의존성이 삽입된다는 의미로 IoC를 DI라는 표현으로 사용합니다.
 
+```java
+@RestController
+public class RestaurantController {
+
+    // ★ IoC사용 전 ★
+    // Contorller에서 Restaurant Repository를 직접 만들어준다
+    //private RestaurantRepository repository = new RestaurantRepository();
+
+    // ★ IoC사용 후 ★
+    @Autowired  // RestaurantController를 만들어줄때 spring이 알아서 RestaurantRepository의 객체를 만들어준다
+    private RestaurantRepository repository;
+
+    // ...이하 생략
+}
+```
+
+```java
+// RestaurantRepository를 스프링이 직접 관리하도록 해당 애노테이션을 붙인다
+@Component
+public class RestaurantRepositoryImpl implements RestaurantRepository {
+
+    // 이하 생략
+}
+```
+
+```java
+//RestaurantRepository를 다른 형태로 쉽게 변경할수있다
+public interface RestaurantRepository {
+    List<Restaurant> findAll();
+    Restaurant findById(Long id);
+}
+```
+
+- 이렇게 IoC를 사용하는것으로 변경하고 Test를 돌리면 오류가 발생한다
+- 해당 오류는 RestaurantControllerTest 클래스에 객체를 직접주입하여 해결할 수 있다
+
+```java
+@SpyBean(RestaurantRepositoryImpl.class)   // 컨트롤러에 원하는 객체를 주입할수있다
+private RestaurantRepository restaurantRepository;
+```
 
 ### 일반 제어권 vs IoC
 - 일반적인 (의존성에 대한) 제어권 : 내가 사용할 <u>의존성은 내가 만든다</u>
@@ -35,6 +84,7 @@ class OwnerController {
 - IoC : 내가 사용할 <u>의존성을 누군가 알아서 주겠지</u>
   - 내가 사용할 의존성의 타입(또는 인터페이스)만 맞으면 어떤거든 상관없다
   - 그래야 내 코드 테스트 하기도 편하지
+- 각 객체들의 강한 의존성을 유연하게 한다
 
 ```java
 class OwnerController{
@@ -160,3 +210,4 @@ class OwnerController {
 ---
 ## Reference
 - [inflearn] 예제로 배우는 스프링 입문 | 백기선님 강좌
+- <https://jongmin92.github.io/2018/02/11/Spring/spring-ioc-di/>
