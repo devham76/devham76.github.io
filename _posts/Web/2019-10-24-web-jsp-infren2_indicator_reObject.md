@@ -26,6 +26,7 @@ tags : [WEB, JSP]
 ---
 
 #### requset 객체
+
 | 메소드 | 설명|
 |---|:---:|
 |getMethod() | get,post방식 구분
@@ -33,6 +34,7 @@ tags : [WEB, JSP]
 |getRequestURL() | 요청 url얻기
 
 #### parameter 메소드 (request 객체)
+
 | 메소드| 설명|
 |---|:---:|
 | getParameter(String name) | name에 해당하는 파라메터값 구함
@@ -40,6 +42,7 @@ tags : [WEB, JSP]
 | <b>getParameterValues(String name)</b>| name에 해당하는 파라메터 값 구함
 
 #### reponse 객체
+
 | 메소드| 설명
 |:---:|:---:|
 |getCharacterEncoding()| 응답할때 문자 인코딩 지정

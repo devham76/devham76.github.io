@@ -15,6 +15,7 @@ tags : [WEB, boostcourse]
 - jsp vs servlet
   - jsp : javs server page, html 파일 내에 java언어를 삽입한 문서
   - servlet : server applet, java언어로 이루어진 웹 프로그래밍 문서
+  
 ---
 ### Servlet 라이프 사이클
 ![servlet_lifecycle](https://user-images.githubusercontent.com/55946791/66801806-5d6a0a80-ef55-11e9-9cef-c5db37578d64.png)

@@ -12,6 +12,10 @@ toc_icon: "cog"
 - Model,View,Controller의 약자
 - 하나의 애플리케이션, 프로젝트를 구성할 때 그 구성요소를 세가지의 역할로 구분한 패턴
 - "어떻ㅎ게 나눌것인가"에 대한 해답 중 하나이다. 특정한 역할들에 대해 역할 분담을 하는 가이드라인을 제시한다
+![mvc](https://user-images.githubusercontent.com/55946791/72495363-d38a5000-3869-11ea-968c-9dae69cf013d.JPG)
+- Model : DB와의 관계, 클라이언트의 요청에서 필요한 자료를 DB로부터 추출/수정하여 Controller에게전달한다
+- View : 사용자에게 보여지는 UI화면, 주로 .jsp파일로 작성하며 Controller에서 어떤 View컴포넌트를 보여줄지 결정한다
+- Controller : 클라이언트의 요청을 받고, 적절한 Model에게 지시를 내리고 Model에서 전달받은 데이터를 적절한 View에 전달한다
 
 ![mvc_role_diagram](https://user-images.githubusercontent.com/55946791/72199983-f0e4a600-3486-11ea-95f0-3d2878016244.png)
 
@@ -57,11 +61,19 @@ toc_icon: "cog"
 - JSP에서는 MVC 모델1(JSP에서 출력/로직을 전처리),2방식(JSP에서 출력만 처리)으로 나눈다
 
 ### Model1
+![mvc1](https://user-images.githubusercontent.com/55946791/72495522-45fb3000-386a-11ea-82c9-0c949711bc59.JPG)
+- MVC에서 View와 Controller가 같이 있는 형태
+- 유지보수보다 개발속도가 더 중요할때
+
+
 ![mvc model1](https://user-images.githubusercontent.com/55946791/72200129-ce538c80-3488-11ea-906d-0bc04e82dd0e.png)
 - 사용자 요청을 jsp가 전부 처리한다
 - 사용자의 요청을 받은 jsp는 자바빈/서비스 클래스를 사용하여 웹브라우저가 요청한 작업을 처리하고 결과를 출력한다
 
 ### Model2
+![mvc2](https://user-images.githubusercontent.com/55946791/72495719-dc2f5600-386a-11ea-9f65-1e28cee20496.JPG)
+
+
 ![mvc model2](https://user-images.githubusercontent.com/55946791/72200152-fb07a400-3488-11ea-82df-78a8fea7a608.png)
 - 모델1과 달리 사용자 요청을 서블릿이 받는다
 - 서블릿은 요청을 View or Model로 전송한다
@@ -75,3 +87,4 @@ toc_icon: "cog"
 - <https://m.blog.naver.com/jhc9639/220967034588>
 - <https://coding-factory.tistory.com/69>
 - [MVC패턴 게시판,JSP](https://coding-factory.tistory.com/71)
+- [실전 jsp강좌](https://www.inflearn.com/course/%EC%8B%A4%EC%A0%84-jsp-%EA%B0%95%EC%A2%8C/lecture/1188)

@@ -68,6 +68,7 @@ toc_icon: "cog"
   - 개인작업이 가능하게 해줘서 프로그래밍 시간을 단축 시킬 수 있다
   - 다중상속 가능
 - (class 클래스명, abstract class 클래스명, interface 인터페이스명)
+- <https://devham76.github.io/java/java-interface/>
 
 ---
 #### 5. 프로세스/쓰레드
@@ -154,7 +155,7 @@ HAVING AVG(salary) >= 2000
 - 스프링, IoC DI
 - JAVA의 Collections에 대한 질문,
 - Process와 Thread의 차이,
-- Thread와 ThreadLocal의 차이, 
+- Thread와 ThreadLocal의 차이,
 - 싱글톤 패턴, 팩토리 패턴에 관한 질문
 ---
 ## Reference
