@@ -63,16 +63,17 @@ toc_icon: "cog"
 ### Model1
 ![mvc1](https://user-images.githubusercontent.com/55946791/72495522-45fb3000-386a-11ea-82c9-0c949711bc59.JPG)
 - MVC에서 View와 Controller가 같이 있는 형태
-- 유지보수보다 개발속도가 더 중요할때
+- 유지보수보다 개발속도가 더 중요할때, 소규모일때
 
 
 ![mvc model1](https://user-images.githubusercontent.com/55946791/72200129-ce538c80-3488-11ea-906d-0bc04e82dd0e.png)
 - 사용자 요청을 jsp가 전부 처리한다
 - 사용자의 요청을 받은 jsp는 자바빈/서비스 클래스를 사용하여 웹브라우저가 요청한 작업을 처리하고 결과를 출력한다
 
+
 ### Model2
 ![mvc2](https://user-images.githubusercontent.com/55946791/72495719-dc2f5600-386a-11ea-9f65-1e28cee20496.JPG)
-
+- MVC에서 Model,View,Controller가 모두 모듈화(부품화) 되어 있는 형태
 
 ![mvc model2](https://user-images.githubusercontent.com/55946791/72200152-fb07a400-3488-11ea-82df-78a8fea7a608.png)
 - 모델1과 달리 사용자 요청을 서블릿이 받는다
