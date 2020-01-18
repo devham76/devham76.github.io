@@ -145,7 +145,7 @@ class OwnerControllerTest {
 - 개발자가 일반적으로 생성한 객체(new 사용)은 bean이 아니다 !!
 - 이런 Bean들만 의존성 주입이 된다
 
-### 빈 등록방법
+### 빈 등록방법 
 1. Component Scaning
     - 해당 <b>에노테이션</b>이 있으면 빈으로 등록해준다
     - @Component
