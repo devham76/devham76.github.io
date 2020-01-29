@@ -19,6 +19,7 @@ toc_icon: "cog"
 ### @Component
 - @Component가 붙은 클래스는 자동으로 객체가 생성된다
 - "tv"를 붙여서 요청시 사용할 아이디나 이름을 설정할수있다
+
 ```xml
 <bean id="tv" class="com.springbook.biz.polymorphism.SamsungTV"/>
 ```
@@ -35,11 +36,11 @@ public class SamsungTV implements TV{
 
 ### @Qualifer
 - 만약 SonySpeaker와 AppleSpeaker객체가 모두 메모리에 생성되어있다면 컨테이너는 어떤 객체를 주입할지 판단할 수 없다
-- 이떄 @Qualifer를 이용하여 객체의 이름으로 판단하여 의존성을 주입한다.
+- 이때 @Qualifer를 이용하여 객체의 이름으로 판단하여 의존성을 주입한다.
 
 ```java
 public class SamsungTV implements TV{
-	@Autowired
+  @Autowired  // 의존성주입
 	@Qualifier("apple")
 	private Speaker speaker;
 
@@ -47,7 +48,7 @@ public class SamsungTV implements TV{
 }
 
 // -- AppleSpeaker.java
-@Component("apple")
+@Component("apple") // 객체자동생성
 public class AppleSpeaker implements Speaker {
   // 생략
 }
@@ -67,6 +68,7 @@ public class SamsungTV implements TV{
 	private int price;
 ```
 
+---
 
 ### 추가 어노테이션
 ![시스템구조](https://user-images.githubusercontent.com/55946791/73338617-5c69a880-42ba-11ea-8871-a9e84526079c.JPG)

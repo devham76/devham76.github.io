@@ -31,6 +31,7 @@ toc_icon: "cog"
 
 
 - SamsungTV.java
+
 ```java
 package com.springbook.biz.polymorphism;
 
@@ -64,6 +65,7 @@ public class SamsungTV implements TV{
 - 컨테이너 설정
 - property태그를 이용하여 name에 있는 함수를 실행한다.
   - name="speaker" 이면 앞에 set을 붙인 함수가 실행된다(setSpeaker())
+
 ```xml
 <bean id="tv" class="com.springbook.biz.polymorphism.SamsungTV">
   <property name="speaker" ref="apple"></property>
@@ -74,6 +76,7 @@ public class SamsungTV implements TV{
 ```
 
 - SamsungTV
+
 ```java
 package com.springbook.biz.polymorphism;
 
