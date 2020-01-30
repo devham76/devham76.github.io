@@ -70,12 +70,13 @@ public class BoardServiceClient {
 ## AOP용어 정리
 
 ### 조인트 포인트(JoinPoint)
-- client가 호출하는 모든 비즈니스 메소드
+- client가 호출하는 <u>모든 비즈니스 메소드</u>
 - ex) BoardServiceImpl, UserServiceImpl 클래스의 모든 메소드
 
 ### 포인트컷(Pointcut)
 - 필터링된 조인트 포인트
-- 비즈니스 메소드들 중에서 우리가 원하는 특정메소드
+- <u>비즈니스 메소드들 중에서 우리가 원하는 특정메소드</u>
+- 이 메소드에서 횡단관심이 발생한다
 
 ```xml
 <aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/>
@@ -87,7 +88,7 @@ public class BoardServiceClient {
 - *(..) : 메소드명 및 매개 변수
 
 ### 어드바이스(Advice)
-- 횡당 관심에 해당하는 공통 기능의 코드
+- <u>횡당 관심에 해당하는 공통 기능의 코드</u>
 - 독립된 클래스 메소드로 작성한다
 - 동작 시점 : before, after, after-returning, after-throwing, around
 
@@ -101,7 +102,7 @@ public class BoardServiceClient {
 
 ### 애스팩트(Aspect) 또는 어드바이저(Advisor)
 - 포인트컷 + 어드바이스 를 이어준다
-- 어떤 포인트컷 메소드에 대해서 어떤 어드바이스 메소드를 실행할지 결정한다
+- <u>어떤 포인트컷 메소드에 대해서 어떤 어드바이스 메소드를 실행할지 결정한다</u>
 
 ```xml
 <bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
@@ -124,8 +125,134 @@ public class BoardServiceClient {
 
 ---
 ## 어드바이스 동작 시점
+|동작시점| 설명|
+|--|--|
+|Before|  비즈니스 메소드 실행 전 동작|
+|After| - After Returning : 비즈니스 메소드가 <u>성공적으로 리턴<u>되면 동작<br>
+- After Throwing : 비즈니스 메소드가 실행 중 <u>예외가 발생</u>하면 동작 (try~catch 블록에서 catch블록에 해당)<br>
+- After : 비즈니스 메소드가 <u>실행된 후, 무조건 실행</u>(try~catch~finally에서 finally에 블록에 해당)|
+|Around| <u>비즈니스 메소드 실행 전후</u>에 처리할 로직을 삽입할 수 있음|
 
+- 예제
 
+```xml
+<bean id="afterThrowing" class="com.springbook.biz.common.AfterThrowingAdvice"></bean>
+<bean id="after" class="com.springbook.biz.common.AfterAdvice"></bean>
+<aop:config>
+	<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/>
+	<aop:aspect ref="afterThrowing">
+		<aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog"/>
+	</aop:aspect>
+	<aop:aspect ref="after">
+		<aop:after pointcut-ref="allPointcut" method="finallyLog"/>
+	</aop:aspect>
+</aop:config>
+```
+
+- Around 예제
+	- ProceedingJoinPoint객체의 proceed()를 통해 비즈니스 메소드를 호출할 수 있다.
+
+```java
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class AroundAdvice {
+	public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable {
+		System.out.println("[Before] : 비즈니스 메소드 수행 전에 처리내용...");
+		Object returnObj = pjp.proceed();
+		System.out.println("[After] : 비즈니스 메소드 수행 후에 처리내용...");
+		return returnObj;
+	}
+}
+```
+
+## 애노테이션으로 AOP 설정
+- @Service : 횡단관심의 기능을 가진 클래스의 객체를 생성시킨다(어드바이스)
+- @Aspect : 어드바이스 + 포인트컷
+- @Pointcut : 횡단관심 발생 메소드 위치
+- @Before, @After, @AfterReturing, @AfterThrowing, @Around : 횡단관심 발생시점
+
+## 예제
+
+- xml 설정
+
+```xml
+<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+```
+
+### Before
+
+```java
+@Service	// 해당 클래스의 객체가 생성되어야 사용할 수 있으므로 @Service를 이용해 생성해준다.
+@Aspect		// LogAdvice 어드바이스(공통횡단관심의 기능) + allPointcut 포인트컷(어디서 발생시킬지) 둘을 연결시켜준다
+public class LogAdvice {
+	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
+	public void allPointcut() {}
+
+	@Before("allPointcut()")
+	public void printLog() {
+		System.out.println("[공통 로그] 비즈니스 로직 수행 전 동작");
+	}
+}
+```
+
+### After
+- @AfterReturing (메소드 성공적 수행 후)
+	- returning을 이용하여 메소드의 결과값을 받아 올 수 있다
+- @AfterThrowing
+	- throwing을 이용하여 예외값 받아올 수 있다
+	- @AfterThrowing(pointcut="afterAllPointCut()", throwing="exceptObj")
+- 예제
+
+```java
+@Service
+@Aspect
+public class AfterThrowingAdvice {
+
+	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
+	public void afterAllPointCut() {}
+
+	// 포인트컷 설정 및 (예외)결과값 받아오기
+	@AfterThrowing(pointcut="afterAllPointCut()", throwing="exceptObj")
+	public void exceptionLog(JoinPoint jp, Exception exceptObj) {
+		String method = jp.getSignature().getName(); // 실행된 메소드 이름 가져오기
+		System.out.println(method + "() 메소드 수행 중 예외 발생");
+
+		if(exceptObj instanceof IllegalArgumentException) {
+			System.out.println("부적합한 값이 입력되었습니다");
+		} else if(exceptObj instanceof NumberFormatException) {
+			System.out.println("숫자 형식의 값이 아닙니다");
+		} else if(exceptObj instanceof Exception) {
+			System.out.println("문제가 발생했습니다");
+		}
+	}
+}
+```
+
+### Around
+
+```java
+@Service
+@Aspect
+public class AroundAdvice {
+// ProceedingJoinPoint객체의 proceed()를 통해 비즈니스 메소드를 호출할 수 있다.
+	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
+	public void aroundAllPointCut() {}
+
+	@Around("aroundAllPointCut()")
+	public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable {
+		String method = pjp.getSignature().getName();
+
+		StopWatch stopWatch = new StopWatch();
+		stopWatch.start();
+		System.out.println("[Before] : 비즈니스 메소드 수행 전에 처리내용...");
+		Object returnObj = pjp.proceed();
+
+		stopWatch.stop();
+		System.out.println(method + "() 메소드 수행 시간 : "+ stopWatch.getTotalTimeMillis()+"(ms)초");
+		return returnObj;
+	}
+}
+```
 
 ---
 ## Reference
