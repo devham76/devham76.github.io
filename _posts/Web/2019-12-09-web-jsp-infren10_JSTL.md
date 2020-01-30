@@ -1,8 +1,8 @@
 ---
 title: "WEB, 실전jsp강좌, JSTL"
-date: 2019-11-29 15:40:28 -0400
+date: 2019-12-09 15:40:28 -0400
 categories: 실전jsp강좌
-tags : [WEB, JSP]
+tags : [WEB, JSP, JSTL]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
