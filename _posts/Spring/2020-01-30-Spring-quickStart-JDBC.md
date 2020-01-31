@@ -81,7 +81,7 @@ public class BoardDAOSpring {
 	public void insertBoard(BoardVO vo) {
 		System.out.println("==>SPRING JDBC로 insertBoard() 기능 처리");
 		jdbcTemplate.update(BOARD_INSERT, vo.getTitle(), vo.getWriter(), vo.getContent());
-	}
+	}    
   // ...중략
 ```
 
