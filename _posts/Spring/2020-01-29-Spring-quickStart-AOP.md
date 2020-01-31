@@ -126,13 +126,13 @@ public class BoardServiceClient {
 ---
 ## 어드바이스 동작 시점
 
-|동작시점| 설명|
-|---|---|
-|Before|  비즈니스 메소드 실행 전 동작|
+|동작시점| 설명
+|--|--|
+|Before|  비즈니스 메소드 실행 전 동작
 |After| - After Returning : 비즈니스 메소드가 <u>성공적으로 리턴<u>되면 동작<br>
 - After Throwing : 비즈니스 메소드가 실행 중 <u>예외가 발생</u>하면 동작 (try~catch 블록에서 catch블록에 해당)<br>
-- After : 비즈니스 메소드가 <u>실행된 후, 무조건 실행</u>(try~catch~finally에서 finally에 블록에 해당)|
-|Around| <u>비즈니스 메소드 실행 전후</u>에 처리할 로직을 삽입할 수 있음|
+- After : 비즈니스 메소드가 <u>실행된 후, 무조건 실행</u>(try~catch~finally에서 finally에 블록에 해당)
+|Around| <u>비즈니스 메소드 실행 전후</u>에 처리할 로직을 삽입할 수 있음
 
 - 예제
 
