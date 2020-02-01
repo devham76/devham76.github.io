@@ -6,7 +6,7 @@ tags : [Spring]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
---- 
+---
 
 ## Controller 분리
 
@@ -142,6 +142,48 @@ public class ViewResolver {
 		return prefix + viewName + suffix;
 	}
 }
+```
+
+
+## Spring MVC적용
+![mvc framework3](https://user-images.githubusercontent.com/55946791/73587331-f1101880-44fd-11ea-9a68-52a048b2c268.jpg)
+
+- handleRequest()메소드 타입을 String -> MoelAndView로 변경한다
+- Model ; Model 정보 저장
+- View ; View 정보 저장
+
+```xml
+<!-- HandlerMapping등록 -->
+<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<property name="mappings">
+		<props>
+			<prop key="/login.do">login</prop>
+			<prop key="/logout.do">logout</prop>
+
+			<prop key="/getBoard.do">getBoard</prop>
+			<prop key="/getBoardList.do">getBoardList</prop>
+			<prop key="/insertBoard.do">/insertBoard</prop>
+			<prop key="/updateBoard.do">/updateBoard</prop>
+			<prop key="/deleteBoard.do">deleteBoard</prop>
+		</props>
+	</property>
+</bean>
+
+<!-- Controller등록 -->
+<bean id="login" class="com.springbook.view.user.LoginController"></bean>
+<bean id="logiout" class="com.springbook.view.user.LogoutController"></bean>
+
+<bean id="getBoard" class="com.springbook.view.board.GetBoardController"></bean>
+<bean id="getBoardList" class="com.springbook.view.board.GetBoardListController"></bean>
+<bean id="insertBoard" class="com.springbook.view.board.InsertBoardController"></bean>
+<bean id="updateBoard" class="com.springbook.view.board.UpdateBoardController"></bean>
+<bean id="deleteBoard" class="com.springbook.view.board.DeleteBoardController"></bean>
+
+<!-- ViewResolver등록 -->
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/board/"></property>
+	<property name="suffix" value=".jsp"></property>
+</bean>
 ```
 
 ---
