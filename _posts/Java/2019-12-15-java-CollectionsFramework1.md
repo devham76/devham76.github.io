@@ -171,6 +171,7 @@ Iterator it = map.keySet().iterator();
 ### LinkedHashMap
 - HashMap + LinkedList : put을 통해 입력한 순서대로 key가 보장된다.
 - [예제]
+
 ```java
 // 둘의 속도차이는 거의 없다
 LinkedHashMap hm = new LinkedHashMap();
@@ -183,6 +184,7 @@ Lhm.put("1","라인");
 Lhm.put("2","카카오");
 Lhm.put("3","네이버");
 ```
+
 - hm결과 / 순서보장x
 
 |key|value|
