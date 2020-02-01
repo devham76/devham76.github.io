@@ -8,7 +8,11 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
 
+
+
 ## Dependency Injection
+- 컨테이너가 직업 객체들 사이에 의존관계를 처리하는 것.
+- Setter Injection , Constructor(생성자) Injection
 - 의존성이 삽입된다는 의미로 IoC를 DI라는 표현으로 사용합니다.
 ### Dependency ( 의존성 )
 - <b>객체지향언어에서 두 클래스 간의 협력하는 관계</b>
@@ -145,7 +149,7 @@ class OwnerControllerTest {
 - 개발자가 일반적으로 생성한 객체(new 사용)은 bean이 아니다 !!
 - 이런 Bean들만 의존성 주입이 된다
 
-### 빈 등록방법 
+### 빈 등록방법
 1. Component Scaning
     - 해당 <b>에노테이션</b>이 있으면 빈으로 등록해준다
     - @Component
