@@ -44,6 +44,76 @@ public String getBoardList( @RequestParam(value="searchCondition", defaultValue=
 }
 ```
 
+## @ModelAttribute
+- @ModelAttribute가 설정된 메소드는 @RequestMapping 어노테이션이 적용된 메소드보다 먼저 호출된다.
+- @ModelAttribute 메소드 실행 결과로 리턴된 객체는 <u>자동으로 Model에 적용</u>되고, <u>View 페이지에서 사용할 수 있다.</u>
+
+### 예제
+- BoardController.java
+: 검색조건을 만들어서 view에서 사용한다
+
+```java
+@ModelAttribute("conditionMap")
+public Map<String, String> searchConditionMap(){
+  Map<String, String> conditionMap = new HashMap<>();
+  conditionMap.put("제목", "TITLE");
+  conditionMap.put("작성자", "WRITER");
+  conditionMap.put("내용", "CONTENT");
+  return conditionMap;
+}
+
+@RequestMapping("/getBoardList.do")
+public String getBoardList( @RequestParam(value="searchCondition", defaultValue="TITLE", required=false) String condition,
+    @RequestParam(value="searchKeyword", defaultValue="", required=false) String keyword,
+    BoardDAO boardDao, BoardVO vo, Model model) {
+  // 3. 결과값을 model에 저장, 이동할곳(view)을 리턴
+  model.addAttribute("boardList", boardDao.getBoardList());
+  return "getBoardList.jsp";
+}
+```
+
+- getBoardList.jsp
+
+```html
+<select name="searchCondition">
+<!-- @ModelAttribute활용 -->
+<c:forEach items="${conditionMap}" var="option">
+  <option value="${op tion.value}">${option.key}</option>
+</c:forEach>
+</select>
+```
+
+## @SessionAttributes
+- <u>Model에 저장되어있는 데이터가 있다면 그 데이터를 세션(HttpSession)에도 자동으로 저장하라는 설정</u>
+
+### 예제_글 update하기
+- 글 상세 정보를 가져올때 Model에 board라는 이름으로 게시글의 정보를 입력한다
+- <u>@SessionAttributes("board")에 의해서 Model에 저장되어있는 board데이터를 세션에 저장</u>한다
+- 글 수정시에 @ModelAttribute("board") BoardVO vo 에서 세션에 저장되어있는 board를 vo에 할당한다
+
+
+```java
+@Controller
+@SessionAttributes("board")
+public class BoardController {
+  @RequestMapping("/getBoard.do")
+	public String getBoard(BoardVO vo, BoardDAO boardDao, Model model) {
+		System.out.println("글 상세보기 처리");
+		model.addAttribute("board", boardDao.getBoard(vo));		// Model 정보 저장
+		return "getBoard.jsp";	// 이동할 View는 String으로 처리
+	}
+
+  @RequestMapping("/updateBoard.do")
+public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDao, ModelAndView mav) {
+  System.out.println("글 수정 처리");
+  boardDao.updateBoard(vo);
+  return "getBoardList.do";
+}
+
+}
+```
+
+
 
 ---
 ## Reference
