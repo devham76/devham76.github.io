@@ -157,6 +157,36 @@ HAVING AVG(salary) >= 2000
 - Process와 Thread의 차이,
 - Thread와 ThreadLocal의 차이,
 - 싱글톤 패턴, 팩토리 패턴에 관한 질문
+
+---
+## static vs final
+### static
+- 메모리에 한번 할당되어 프로그램이 끝날 때 까지 유지된다
+- 인스턴스에 공통적으로 사용해야하는 것에 static을 붙인다
+- 전역으로 자주 사용할 메서드를 static메서드로 만들어 사용한다
+
+### final
+- final은 마지막, 최종적이라는 의미로 java에서 final 키워드는 <u>상수나 메소드,클래스</u>를 정의한 뒤 변경하지 못하게 할때 사용한다.
+
+### static final vs final
+- static final : 클래스이름없이도 사용가능
+- final : 객체생성없이 사용불가능
+
+### static final
+static은 알다시피 클래스 변수이다. 그러므로 static final은 객체가 아닌 클래스에 존재하는 단 하나의 상수이다. 즉 객체마다 값이 바뀌는 것이 아닌 클래스에 존재하는 상수이므로 선언과 동시에 초기화를 해 주어야하는 클래스 상수이다.
+```java
+public class SamsungTV
+{
+	static final String corpName="samsung";  //선언과 동시에 초기화
+  public void turnOn(){
+    //
+  };
+
+}
+```
+
+
+
 ---
 ## Reference
 
