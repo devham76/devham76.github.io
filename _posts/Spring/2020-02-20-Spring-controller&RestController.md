@@ -7,7 +7,7 @@ toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
-### 기존의 MVC 컨트롤러 (@Controller)
+### 기존의 MVC 컨트롤러   (@Controller)
 - 주용도 : view(화면)를 리턴
 - @ResponseBody를 사용하여 객체 리턴 가능
 ### Restful 웹서비스 컨트롤러 (@RestController)
