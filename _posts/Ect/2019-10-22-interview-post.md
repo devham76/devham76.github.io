@@ -161,9 +161,19 @@ HAVING AVG(salary) >= 2000
 ---
 ## static vs final
 ### static
-- 메모리에 한번 할당되어 프로그램이 끝날 때 까지 유지된다
+- <b>메모리에 한번 할당되어 프로그램이 끝날 때 까지 유지된다><.b>
+- static이 붙은 변수들은 객체들이 다 같이 공유하는 데이터를 의미한다.
+
+- static이 붙은 메소드들은 객체들의 데이터와 관계없는 완벽하게 공통적인 로직을 정의할 때 사용한다.
+- static이 붙은 메소드를 보면 무조건 ‘객체와 무관하다.’혹은 ‘객체의 영향 받지 않는 메소드
+
+- 따라서 static 메소드에서는 인스턴스 변수나 객체의 메소드를 사용할 수 없다.
+
+
+### static을 쓰는이유
 - 인스턴스에 공통적으로 사용해야하는 것에 static을 붙인다
 - 전역으로 자주 사용할 메서드를 static메서드로 만들어 사용한다
+
 
 ### final
 - final은 마지막, 최종적이라는 의미로 java에서 final 키워드는 <u>상수나 메소드,클래스</u>를 정의한 뒤 변경하지 못하게 할때 사용한다.
@@ -174,6 +184,7 @@ HAVING AVG(salary) >= 2000
 
 ### static final
 static은 알다시피 클래스 변수이다. 그러므로 static final은 객체가 아닌 클래스에 존재하는 단 하나의 상수이다. 즉 객체마다 값이 바뀌는 것이 아닌 클래스에 존재하는 상수이므로 선언과 동시에 초기화를 해 주어야하는 클래스 상수이다.
+
 ```java
 public class SamsungTV
 {
@@ -191,3 +202,4 @@ public class SamsungTV
 ## Reference
 
 - <https://blog.naver.com/vnemftnsska2/221428722368>
+- <https://devbox.tistory.com/entry/Java-static>
