@@ -8,8 +8,6 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
 
-
-
 ## Dependency Injection
 - 컨테이너가 직업 객체들 사이에 의존관계를 처리하는 것.
 - Setter Injection , Constructor(생성자) Injection
@@ -37,9 +35,28 @@ toc_icon: "cog"
 
 ### 구현방법
 - 스프링은 두가지( @Component, @Autowired ) 어노테이션을 지원해서 IoC를 구현한다
-- @Component
-- @Autowired
 - 의존성이 삽입된다는 의미로 IoC를 DI라는 표현으로 사용합니다.
+
+###  @Component
+를 사용해서 우리는 스프링 프레임워크에게 이렇게 말한다: "스프링 프레임워크야 이것은 너가 관리해야 하는 빈이야"
+###  @Autowired
+를 사용해서 우리는 스프링 프레임워크에게 이렇게 말한다: "야 스프링 프레임워크야 이 타입에 맞는 것을 찾아서 그것을 이것과 연결 시켜줘""
+
+```java
+@Component
+public class WelcomeService {
+    //Bla Bla Bla
+}
+@RestController
+public class WelcomeController {
+    @Autowired
+    private WelcomeService service;
+    @RequestMapping("/welcome")
+    public String welcome() {
+        return service.retrieveWelcomeMessage();
+    }
+}
+```
 
 ```java
 @RestController
