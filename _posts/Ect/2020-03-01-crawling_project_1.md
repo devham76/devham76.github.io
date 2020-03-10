@@ -1,5 +1,5 @@
 ---
-title: "WEB, Crawling, 취업정보 크롤링(1)"
+title: "WEB, Crawling, 취업정보 크롤링하기"
 date: 2020-03-01 16:00:28 -0400
 categories: PROJECT
 tags : [WEB, PROJECT]
@@ -13,18 +13,26 @@ toc_icon: "cog"
   - java가 조금 느리다고 하지만 괜찮다
   - 많은 양을 확인할것이 아니다
   - 매일 밤 aws에서 crontab으로 실행할 예정이므로 느려도 상관없다
-- [도메인 주소]/robots.txt 를 검색하여 __크롤링이 허용되는 범위에서만__ 크롤링을 할것이다
+- _도메인 주소/robots.txt_ 를 검색하여 __크롤링이 허용되는 범위에서만__ 크롤링을 할것이다
 - __jsoup과 Selenium__ 을 사용해서 크롤링할 수있는데 정적인페이지-jsoup, 동적인페이지-selenum을 이용할것이다
 
 - [Selenium 참고 사이트](https://heodolf.tistory.com/103?category=887835)
+
+---
+
 > Selenium은 되고, Jsoup은 안되는 이유
+```
+Jsoup은 HTTP Request를 사용하여 서버에 데이터를 요청하여 랜더링된 화면을 크롤링한다
+SSR은 화면은 모든 부분을 서버에서 랜더링하지만
+CSR은 최소한만 서버에서 랜더링하고 나머지를 브라우저에서 랜딩하기 때문에
+CSR은 Jsoup이 아닌 현재 브라우저에 출력된 페이지의 소스를 파싱하는 Selenium을 이용해서 크롤링해야한다
+```
+
+>동적 웹페이지가 아니라면 Jsoup을 이용하는 것이 좋다.
 
 ```
- 요즘 웹사이트들은 빠른 반응성을 위하여 사용자가 콘텐츠를 서버에 요청했을 때, 서버는 데이터만 브라우저에 전송하고, 브라우저에서는 이 데이터를 가지고 화면을 랜더링하는 방식을 사용한다. 이러한 방식을 클라이언트 사이드 랜더링(CSR, Client-Side Rendering)이라고 하며, XHR(XMLHttpRequest), AJAX를 이용하여 사용되다가 React.js와 같은 Javscript 프레임워크들이 생겨나면서 그 영역이 점점 확대되어가고 있다.
-
- CSR은 브라우저에서 화면을 그려준다는 동적인 특성 때문에 서버에 데이터를 요청하는 HTTP Request를 사용하면 실제 화면에 그려진 데이터는 수집할 수 없는 것이다.
-
- 결론적으로, Jsoup은 HTTP Request를 사용하는 라이브러리이기 때문에 React를 사용하는 Twitter의 콘텐츠를 수집할 수 없는 것이며, WebDriver를 이용하는 Selenium은 수집할 수 있는 것이다.
+Jsoup은 HTTP Request를 통해 웹서버에 직접 요청하기 때문에 빠른 응답을 받을 수 있다.
+하지만, Selenium은 브라우저가 랜더링 된 후 페이지를 파싱하기 때문에 수집 속도가 느리다.
 ```
 
 ## 코드
