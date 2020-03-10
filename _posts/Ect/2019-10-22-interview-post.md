@@ -2,7 +2,7 @@
 title: "기술 면접 준비-기본"
 date: 2019-10-22 15:00:28 -0400
 categories: [interview]
-tags : [interview, JAVA]
+tags : [interview]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
