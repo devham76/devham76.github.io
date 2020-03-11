@@ -6,7 +6,7 @@ tags : [JAVA,java기본개념]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
----
+--- 
 
 ### 추상 클래스란 ? (abstract class)
 - 추상 메서드를 포함한 클래스
