@@ -135,6 +135,8 @@ public class CatalanNumber {
 ```
 
 
+---
+## 참고
 
 - <https://www.geeksforgeeks.org/program-nth-catalan-number/>
 - <https://suhak.tistory.com/77>
