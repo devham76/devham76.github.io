@@ -1,7 +1,7 @@
 ---
 title: "WEB, GitHub, 초대장 웹 페이지"
 date: 2019-10-11 16:00:28 -0400
-categories: PROJECT
+categories: etc
 tags : [WEB, PROJECT]
 toc: true
 toc_label: "My Table of Contents"

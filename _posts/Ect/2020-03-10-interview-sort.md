@@ -1,7 +1,7 @@
 ---
 title: "프로그래밍 면접 이렇게 준비한다 - 정렬"
 date: 2020-03-10 16:00:28 -0400
-categories: interview
+categories: etc
 tags : [interview]
 toc: true
 toc_label: "My Table of Contents"

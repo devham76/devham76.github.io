@@ -1,7 +1,7 @@
 ---
 title: "자바 웹 개발자 로드맵"
 date: 2020-01-08 15:30:28 -0400
-categories: [STUDY]
+categories: [etc]
 tags : [STUDY,youtube]
 toc: true
 toc_label: "My Table of Contents"

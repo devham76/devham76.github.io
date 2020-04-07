@@ -1,7 +1,7 @@
 ---
 title: "WEB, Crawling, 취업정보 크롤링하기"
 date: 2020-03-01 16:00:28 -0400
-categories: PROJECT
+categories: etc
 tags : [WEB, PROJECT]
 toc: true
 toc_label: "My Table of Contents"

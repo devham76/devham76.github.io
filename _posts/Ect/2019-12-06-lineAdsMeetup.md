@@ -1,8 +1,8 @@
 ---
 title: "LINE Developers Meetup, LINE Ads Platform  "
 date: 2019-12-06 15:30:28 -0400
-categories: [interest]
-tags : [interest, line, meetup]
+categories: [etc]
+tags : [review, line, meetup]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
