@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Hyemi Lee"
   avatar           : "assets/images/myphoto.JPG"
-  bio              : "주니어 개발자의 삽질이야기"
+  bio              : "주니어 개발자의 삽질과 기록"
   location         : "Seoul/Korea"
   links:
     - label: "Email"
