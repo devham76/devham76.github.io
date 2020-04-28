@@ -13,11 +13,18 @@ Hyemi Lee(이혜미)
 ### Contact
 * E-mail: devham76@gmail.com
 * social: GitHub , Facebook , Instagram
-* [Resume](https://devham76.github.io/assets/portfolio/resume_200322.pdf)
+* [Resume](https://devham76.github.io/resume/)
 
-### Featured Skills
-* PHP
+## Skill
+
+### Familiar 
 * JAVA
+* Spring
+* PHP
+* MySQL
+* Linux
+### Experienced
+* AWS EC2
 * JavaScript
 * HTML
 * CSS
