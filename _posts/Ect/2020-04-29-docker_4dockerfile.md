@@ -35,13 +35,16 @@ CMD /bin/bash
 
 ## 2. 이미지로 빌드
 - ko_java라는 이미지로 빌드 해서 해당 폴더에 만들어라
+
 ```
-$ docker build -t my_dev
+$ docker build -t my_dev.
 ```
+
 ![docker image](https://user-images.githubusercontent.com/55946791/80569137-42fc0800-8a33-11ea-99d4-f478ebc9eb75.JPG)
 
 
 ## 3. 이미지를 컨테이너로 실행
+
 ```
 $ docker run -it --name my_first_dev my_dev /bin/bash
 ```
