@@ -13,6 +13,7 @@ toc_icon: "cog"
 ## 1. Dockerfile 작성
 - [Docker hub](https://hub.docker.com/search?q=java8&type=image)에서 필요한 프로그램을 검색해서 계정과 컨테이너를 확인한다.
 - FROM 뒤에 이름을 붙여준다. (이 컨테이너로 부터 아래 명령어를 실행하라는 뜻.)
+
 ```
 FROM openwhisk/java8action
 

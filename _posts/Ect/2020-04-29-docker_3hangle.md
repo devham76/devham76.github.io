@@ -18,10 +18,12 @@ toc_icon: "cog"
 
 ### 2. 명령어 파일 build , 이미지로 생성
 - 빌드하기
+
 ```
 ko_ubuntu:latest라는 이름으로 ./바로 아래에 빌드한다.
 $ docker build --tag ko_ubuntu:latest ./
 ```
+
 (※ 빌드란 ? 소스코드 파일을 실행 가능한 소프트웨어 산출물로 만드는 일련의 과정을 말한다.)
 
 - 빌드가 완료 되어 이미지로 생성되었다.
@@ -36,6 +38,7 @@ $ docker build --tag ko_ubuntu:latest ./
 
 docker run -it --name ko_ubuntu1 ko_ubuntu /bin/bash
 ```
+
 ![docker 한글 이미지 완료](https://user-images.githubusercontent.com/55946791/80560882-83e92200-8a1d-11ea-92b3-1635deba72d0.JPG)
 
 ### 4. 컨테이너 실행 후 접속
@@ -47,6 +50,7 @@ docker run -it --name ko_ubuntu1 ko_ubuntu /bin/bash
 
 ### 4. java설치
 - 방법1.
+
 ```
 1.  wget설치
 apt-get install wget
@@ -57,6 +61,7 @@ wget --header "Cookie: oraclelicense=accept-securebackup-cookie" https://downloa
 3. jdk 압축 해제
 tar -xvf [jdk파일 이름]
 ```
+
 - 방법2. 방법1에서 압축 해제가 안되서 이 블로그를 참고했다.
 - <https://lsjsj92.tistory.com/394>
 - sudo apt-get install openjdk-8-jdk 이후 path설정
