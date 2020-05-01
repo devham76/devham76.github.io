@@ -114,6 +114,7 @@ deploy:
 
 ### CodeDeploy 에이전트 설치
 - EC2에 접속 후 명령어 입력
+
 ```
 [명령어]
 [ec2-user@springboot2-webservice ~]$ aws s3 cp s3://aws-codedeploy-ap-northeast-2/latest/install . --region ap-northeast-2
@@ -162,8 +163,11 @@ mkdir ~/app/step2 && mkdir ~/app/step2/zip
 /home/ec2-user/app/step2/zip로 복사되어 압축을 풀 예정이다.
 
 ### Travis CI 설정은 .travis.yml로 진행했다.
-### AWS CodeDeploy 설정은 appspec.yml로 진행한다.
-- travis.yml
+- __.travis.yml__ (테스트,빌드 후 s3에 파일 전달, codedeploy에 배포요청)
+  - 1. 빌드
+  - 2. springboot2-webservice로 zip파일 만든 후 deploy/springboot2-webservice.zip로 복사(CodeDeploy가 Jar파일 인식 못하므로 zip으로 만든다.)
+  - 3. AWS S3에 파일 전달
+  - 4. CodeDeploy에 배포요청
 
 ```
 ...
@@ -179,7 +183,9 @@ mkdir ~/app/step2 && mkdir ~/app/step2/zip
    wait-until-deployed: true
 ...
 ```
-- __appspec.yml__
+
+### AWS CodeDeploy 설정은 appspec.yml로 진행한다.
+- __appspec.yml__ (CodeDeploy가 배포)
     - soruce: CodeDeploy에서 전달해준 파일중 destination으로 이동시킬 대상지정.
     - / 이므로 전체 파일을 이동시킬것임
     - destination : source에서 지정된 파일을 받을 위치.
@@ -192,10 +198,11 @@ files:
     destination : /home/ec2-user/app/step2/zip/
     overwrite: yes
 ```
-- 두개의 파일을 수정,생성 한 후 git에 push한다.
 
 ### 결과
+- 위 두개의 파일을 수정,생성 한 후 git에 push한다.
 - AWS의 CodeDeploy에 배포 성공한 내역 확인 가능
 ![codedeploy 배포성공](https://user-images.githubusercontent.com/55946791/80800759-420ad800-8be5-11ea-9b69-0c0f082a19a8.JPG)
+
 - /home/ec2-user/app/step2/zip에 Travis CI파일 -> AWS S3에 있는 파일들이 해당 폴더 아래에 생성된 것을 확인 할 수 있다
 ![codedeploy 배포성공 zip 폴더](https://user-images.githubusercontent.com/55946791/80800801-5f3fa680-8be5-11ea-9187-28cc309dfa9d.JPG)
