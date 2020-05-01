@@ -139,6 +139,7 @@ sudo service codedeploy-agent status
 
 ### CodeDeploy란?
 - CodeDeploy는 AWS의 배포 삼형제
+
 ```
 1. Code Commit
 - 깃 허브와 같은 코드 저장소의 역할
@@ -206,3 +207,45 @@ files:
 
 - /home/ec2-user/app/step2/zip에 Travis CI파일 -> AWS S3에 있는 파일들이 해당 폴더 아래에 생성된 것을 확인 할 수 있다
 ![codedeploy 배포성공 zip 폴더](https://user-images.githubusercontent.com/55946791/80800801-5f3fa680-8be5-11ea-9187-28cc309dfa9d.JPG)
+
+## 최종결론
+- .travis.yml
+  - 테스트, 빌드 후 필요한 파일을 AWS S3에 복사해서 준다.
+  - 필요한 파일 : .jar(자바프로젝트), appspecyml(CodeDeploy가 실행할 파일), .sh(배포할 shell script)
+```
+before_deploy:
+  - mkdir -p before-deploy # zip에 포함시킬 파일들을 담을 디렉토리 생성
+  - cp scripts/*.sh before-deploy/
+  - cp appspec.yml before-deploy/
+  - cp build/libs/*.jar before-deploy/
+  - cd before-deploy && zip -r before-deploy * # before-deploy로 이동 후 전체 압축
+  - cd ../ && mkdir -p deploy # 상위 디렉토리로 이동 후 deploy 디렉토리생성
+  - mv before-deploy/before-deploy.zip deploy/springboot2-webservice.zip # deploy로 zip파일 이동
+```
+
+- appspec.yml
+  - AWS S3에 있는 파일을 EC2서버의 /home/ec2-user/app/step2/zip/에 복사한다.
+  - 모든 파일을 ec2-user권한을 준다.
+  - deploy.sh파일을 실행 시켜서 배포한다.
+
+```
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination : /home/ec2-user/app/step2/zip/
+    overwrite: yes
+
+permissions:
+  - object: /
+    patteren: "**"
+    owner: ec2-user
+    group: ec2-user
+
+hooks:
+  ApplicationStart:
+    - location: deploy.sh
+      timeout: 60
+      runas: ec2-user
+```
+![배포 완료](https://user-images.githubusercontent.com/55946791/80823313-5ec00380-8c17-11ea-8402-cf7996545297.JPG)
