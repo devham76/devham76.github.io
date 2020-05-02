@@ -249,3 +249,7 @@ hooks:
       runas: ec2-user
 ```
 ![배포 완료](https://user-images.githubusercontent.com/55946791/80823313-5ec00380-8c17-11ea-8402-cf7996545297.JPG)
+
+---
+## 참고
+- [스프링 부트와 AWS로 혼자 구현하는 웹 서비스](http://www.yes24.com/Product/Goods/83849117)
