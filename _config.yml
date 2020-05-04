@@ -112,6 +112,9 @@ author:
   bio              : "주니어 개발자의 삽질과 기록"
   location         : "Seoul/Korea"
   links:
+    - label: "Resume"
+      icon: "far fa-file"
+      url: "https://devham76.github.io/resume/"
     - label: "Email"
       icon: "fas fa-fw fa-link"
       url: "mailto:devham76@gmail.com"
@@ -121,9 +124,13 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/traveller_ham"
+
 # Site Footer
 footer:
   links:
+    - label: "Resume"
+      icon: "far fa-file"
+      url: "https://devham76.github.io/resume/"
     - label: "Email"
       icon: "fas fa-fw fa-link"
       url: "mailto:devham76@gmail.com"
