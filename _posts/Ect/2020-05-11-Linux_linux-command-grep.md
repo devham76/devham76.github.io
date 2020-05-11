@@ -1,6 +1,16 @@
+---
+title: "Linux, 명령어 - grep"
+date: 2020-05-11 20:00:28 -0400
+categories: etc
+tags : [Linux]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
+---
 
 ## grep
-- grep은 입력으로 전달된 파일의 내용에서 특정 문자열을 찾고자할 때 사용하는 명령어입니다. 리눅스에서 가장 많이 사용되는 명령어 중 하나이죠.
+- grep은 입력으로 전달된 __파일의 내용에서 특정 문자열을 찾고자할__ 때 사용하는 명령어입니다.
+- 리눅스에서 가장 많이 사용되는 명령어 중 하나이죠.
 
 ```
 grep [OPTION...] PATTERN [FILE...]
@@ -33,6 +43,21 @@ grep [OPTION...] PATTERN [FILE...]
        -c        : 파일 당 패턴이 일치하는 라인의 갯수 출력.
 ```
 
+### $ grep [OPTION] [PATTERN] [FILE]
+ex ) grep -l "eztoc" .
+
+```
+[하위 디렉토리에서 "heap" 문자열 탐색. i: 대소문자 구분x]
+$ grep -ir "heap"
+./contents/java.md:- Heap 메모리 영역에 적재된 객체의 생존 여부를 판단하여 더 이상 사용되지 않는(참조 되지 않는) 객체를 해제하는 방식으로 메모리를 자동 관리한다.
+./contents/java.md:**Heap영역은 GC의 주요 대상**
+
+[하위 디렉토리, 대소문자 구분x, 파일 찾기]
+$ grep -lir "heap"
+contents/java.md
+contents/os.md
+
+```
 ---
 ## 참고
 - <https://recipes4dev.tistory.com/157>
