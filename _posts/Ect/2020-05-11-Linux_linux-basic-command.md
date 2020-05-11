@@ -1,8 +1,8 @@
 ---
-title: "Nginx를 이용해서 무중단 서비스 만들기"
-date: 2020-05-02 20:00:28 -0400
+title: "Linux, 기본 명령어"
+date: 2020-05-11 20:00:28 -0400
 categories: etc
-tags : [CD, Nginx]
+tags : [Linux]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
