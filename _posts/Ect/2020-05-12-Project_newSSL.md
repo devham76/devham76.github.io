@@ -8,7 +8,7 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
 
-> [완성된 사이트 보러가기](devham76.com)
+> [완성된 사이트 보러가기](https://www.devham76.com)
 
 ## HTTP와 HTTPS차이
 평문의 HTTP 문서는 SSL 레이어를 통과하면서 암호화 돼서 목적지에 도착하고, 목적지에서는 SSL 레이어를 통과하면서 복호화 돼서 웹 브라우저에 전달된다.
