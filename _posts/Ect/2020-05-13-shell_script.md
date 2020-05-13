@@ -26,7 +26,7 @@ toc_icon: "cog"
 
 ## 코드
 
-```shell script
+```
 #! /bin/bash
 
 ########################
