@@ -9,9 +9,10 @@ toc_icon: "cog"
 ---
 
 ## Dependency Injection
-- 컨테이너가 직업 객체들 사이에 의존관계를 처리하는 것.
+- 컨테이너가 직접 객체들 사이에 의존관계를 처리하는 것.
 - Setter Injection , Constructor(생성자) Injection
 - 의존성이 삽입된다는 의미로 IoC를 DI라는 표현으로 사용합니다.
+
 ### Dependency ( 의존성 )
 - <b>객체지향언어에서 두 클래스 간의 협력하는 관계</b>
 - 일반적으로 둘 중 하나가 다른 하나를 어떤 용도를 위해 사용함
