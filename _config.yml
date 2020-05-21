@@ -118,9 +118,6 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devham76"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/traveller_ham"
     - label: "Resume"
       icon: "far fa-file"
       url: "https://devham76.github.io/resume/"
@@ -137,9 +134,6 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devham76"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/traveller_ham"
 
 
 # Reading Files
