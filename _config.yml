@@ -274,7 +274,7 @@ defaults:
     values:
       layout: single
       _profile: true
-      read_time: true
+      read_time: false
       comments:  true
       share: true
       related: true
