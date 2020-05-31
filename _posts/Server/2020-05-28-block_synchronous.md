@@ -84,3 +84,21 @@ while(!ft.isDone()) {
 > Blocking-Async 는 별다른 장점이 없어 일부러 사용할 필요는 없지만
 NonBlocking-Async 방식을 사용중에 Blocking으로 동작하는 것이 포함되어있다면
 의도하지 않게 Blocking-Async로 동작할 수 있다.
+
+<br>
+
+- 동기 : call하고 응답이 올 때까지 기다렸다가 다음 로직을 실행한다.
+ * 장점 : 안전성이 보장된다. 순서가 보장된다.
+ * 단점 : 느리다.
+
+
+
+- 비동기 : call하고 응답이 오지 않아도 다음 로직을 실행한다.
+ * 장점 : 빠르다
+ * 단점 : 처리 하기가 까다롭다. 순서가 보장이 되지 않는다.
+ ---
+
+synchronous blocking IO : syscall 이 완료될 때 까지 기다림
+synchronous non-blocking IO : blocking 이 될 상황에서 EWOULDBLOCK 반환 (에러 처리 필요)
+asynchronous blocking IO : IO는 non-blocking 이지만, 알림을 blocking 함 (select)
+asynchronous non-blocking IO : IO를 background 에서 실행 callback 으로 처리
