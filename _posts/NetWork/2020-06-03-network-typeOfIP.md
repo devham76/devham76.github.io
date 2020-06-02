@@ -1,6 +1,6 @@
 ---
 title: "NetWork, IP종류 (공인IP, 사설IP, 고정IP, 유동IP)"
-date: 2020-01-08 15:05:28 -0400
+date: 2020-06-03 15:05:28 -0400
 categories: [NetWork]
 tags : [NetWork, IP]
 toc: true
