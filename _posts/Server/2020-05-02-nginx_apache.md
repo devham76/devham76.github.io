@@ -57,6 +57,46 @@ toc_icon: "cog"
 - Event-driven 처리 방식으로 모든 IO를 전부 Event-Listener로 미루기 대문에 흐름이 끊기 지 않고 __빠르게 응답이 가능하다.__
 
 
+### 프록시+로드밸런싱
+
+```
+# Load Balancing
+upstream target-server {
+  least_conn;
+  server [서버주소1] weight=5 max_fails=3 fail_timeout=10s;
+  server [서버주소2] weight=10 max_fails=3 fail_timeout=10s;
+}
+
+server {
+  listen 80;
+  listen [::]:80;
+
+  server_name front.local;
+
+  access_log /var/log/nginx/access.log;
+  error_log /var/log/nginx/error.log;
+
+  location / {
+    proxy_next_upstream error http_503;
+    proxy_pass http://target-server;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-NginX-Proxy true;
+    proxy_set_header Host $host;
+    proxy_redirect off;
+  }
+}
+```
+
+- 로드 밸런싱
+  - upstream이라는 옵션으로 설정가능
+  - least_conn은 연결이 가장 적은 서버로 트래픽 전달
+  - (유료)Nginx Plus만 Health check지원
+  - ※HAProxy
+    - L4,L7 H/W 로드밸런서 대체하기 위한 오픈소스 S/W
+    - (High Availabilty 고가용성). Nginx와 달리 health check, 특정 api에서 서버상태 점검 가능
+    - [참고 글](https://seokjun.kim/haproxy-and-nginx-load-balancing/)
+
 ---
 ## 참고
 - <https://taetaetae.github.io/2018/06/27/apache-vs-nginx/>

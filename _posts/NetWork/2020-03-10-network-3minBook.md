@@ -1,8 +1,8 @@
 ---
-title: "NetWork, TCP & UDP"
+title: "NetWork, 네트워크 기초 지식"
 date: 2020-01-08 15:05:28 -0400
 categories: [NetWork]
-tags : [NetWork, TCP, UDP]
+tags : [NetWork]
 toc: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
