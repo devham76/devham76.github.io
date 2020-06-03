@@ -40,18 +40,19 @@ toc_icon: "cog"
 
 
 ## 네트워크 로드밸런서 종류
-- L2(Data Link Layer)
+### L2(Data Link Layer)
 	- Mac Address Load Balancing
 	- 브릿지, 허브 등
 	- 장점 : 구조가 간단, 신뢰성높다, 가격저렴, 성능좋다
 	- 단점 : Broadcast 패킷에 의해 성능저하 발생, 라우팅 등 상위레이어 프로토콜 기반 스위칭 불가
-- L3(Network Layer)
+### L3(Network Layer)
 	- IP Address Load Balancing
 	- L2 + Routing
 	- Router, ICMP 프로토콜, IP
 	- 장점 : Broadcast 트래픽으로 전체 성능 저하 방지, 트레픽 체크
 	- 단점 : 특정 프로토콜을 이용해야 스위칭 가능
-- __L4(Transport Layer)__
+
+### L4(Transport Layer)
 ![L4-로드밸런싱](https://user-images.githubusercontent.com/55946791/83123692-317c4d80-a110-11ea-869c-e62c4cff2fae.jpg)
 
 	- Transport Layer(IP+PORT) Load Balancing
@@ -59,7 +60,7 @@ toc_icon: "cog"
 	- 장점 : port기반 스위칭 지원, VIP를 이용하여 여러대를 한대로 묶어 부하분산
 	- 주로 Round Robin 방식 사용
 
-- __L7(Application Layer)__
+### L7(Application Layer)
 ![L7-로드밸런싱](https://user-images.githubusercontent.com/55946791/83123689-304b2080-a110-11ea-8089-6674d04d831b.jpg)
 
 	- Application Layer(사용자 Request) Load Balancing
@@ -75,19 +76,19 @@ toc_icon: "cog"
 ## 로드밸런서 알고리즘 종류
 - 로드 밸런서는 어떤 기준으로 Server를 선택할까?
 - Round Robin(순차방식)
-	- 요청을 순서대로 각 서버에 균등하게 분배하는 방식
+	- __요청을 순서대로 각 서버에 균등하게__ 분배하는 방식
 	- 서버 커넥션 수나 응답시간에 상관없이 모든 서버를 동일하게 처리
 	- 다른 알고리즘에 비해서 가장 빠르다
 - Least Connetion(최소 연결 방식)
-	- 서버에 연결되어 있는 Connection 개수가 가장 적은 서버에 트래픽 분배
+	- __서버에 연결되어 있는 Connection 개수가 가장 적은__ 서버에 트래픽 분배
 	- 자주 세션이 길어지거나, 서버에 분배된 트래픽들이 일정하지 않은 경우에 적합
 - Least Response Time(응답 시간방식)
 	- 서버의 현재 연결 상태와 응답시간을 모두 고려하여 트래픽을 배분한다
 	- 응답시간 : Response Time, 서버에 요청을 보내고 최초 응답을 받을 때까지 소요되는 시간
-	- 가장 적은 연결 상태 + 가장 짧은 응답시간을 보이는 서버에 우선적으로 로드를 배분한다
+	- __가장 적은 연결 상태 + 가장 짧은 응답시간을__ 보이는 서버에 우선적으로 로드를 배분한다
 - IP 해시 방식(IP Hash Method)
 	- 클라이언트의 IP 주소를 특정 서버로 매핑하여 요청을 처리하는 방식
-	- 사용자의 IP를 해싱해(Hashing, 임의의 길이를 지닌 데이터를 고정된 길이의 데이터로 매핑하는 것, 또는 그러한 함수) 로드를 분배하기 때문에 사용자가 항상 동일한 서버로 연결되는 것을 보장합니다.
+	- 사용자의 IP를 해싱해(Hashing, 임의의 길이를 지닌 데이터를 고정된 길이의 데이터로 매핑하는 것, 또는 그러한 함수) 로드를 분배하기 때문에 __사용자가 항상 동일한 서버로__ 연결되는 것을 보장합니다.
 
 
 ## 로드 밸런서 장애 대비는 어떻게 할까?
