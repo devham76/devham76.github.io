@@ -99,6 +99,36 @@ consumer가 카프카 서버에 접속, 가져오는 방식을 선택해서 메�
 - 리더(원본 - 읽기,쓰기) & 팔로워(복사본 - 복사만함.)
 - 리더가 있던 브로커 장애 발생시, 팔로워가 새로운 리더가 된다
 
+---
+## 로컬에서 실습
+1. 주키퍼 시작
+- zookeeper-server-start.bat ../../config/zookeeper.properties
+![카프카-주키퍼화면](https://user-images.githubusercontent.com/55946791/83629354-e7461100-a5d4-11ea-8855-1c3036bc8364.JPG)
+- 주키퍼 종료
+  - bin/windows/zookeeper-server-stop.bat config/zookeeper.properties
+2. 카프카 서버시작
+- kafka-server-start.bat ../../config/server.properties
+![카프카-서버시작 화면](https://user-images.githubusercontent.com/55946791/83629352-e614e400-a5d4-11ea-80c9-9b9f323e2244.JPG)
+- kafka 종료
+  - bin/windows/kafka-server-stop.bat config/server.properties
+
+
+3. 카프카 토픽생성 후 producer에서 메시지 생성
+- 토픽생성
+  - kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+- producer topic에 메세지 생성
+  - kafka-console-producer.bat --broker-list localhost:9092 --topic test
+- 메세지 조회
+  - kafka-console-producer.bat --broker-list localhost:9092 --topic REQ-LOG
+![카프카-토픽생성 producer](https://user-images.githubusercontent.com/55946791/83629357-e8773e00-a5d4-11ea-9249-af190b8e4f31.JPG)
+
+4. 카프카 컨슈머측에서 확인
+![카프카-컨슈머](https://user-images.githubusercontent.com/55946791/83629356-e7dea780-a5d4-11ea-8561-b1c1aa8ddde8.JPG)
+
+5. 카프카 토픽리스트
+kafka-topics.bat --list --zookeeper localhost:2181
+![카프카-토픽리스트](https://user-images.githubusercontent.com/55946791/83629355-e7dea780-a5d4-11ea-9956-785afc696558.JPG)
+
 
 ---
 ## 참고
