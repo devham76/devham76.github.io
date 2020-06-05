@@ -19,6 +19,7 @@ toc_icon: "cog"
 
 ### 공통점
   - 비동기 시스템
+  -
 ### 기존 메시싱 시스템
 - 목적
   - 메시지 보관,교환,전달의 신뢰성 보장 -> 따라서 내부 프로세스 복잡,  / 속도, 용량 小
@@ -27,7 +28,7 @@ toc_icon: "cog"
 - 목적
   - 실시간 대량 전송 , 따라서 신뢰성관리는 pub/sub에게 넘긴다.
 - 큐에서 consumer로 push하는 기능은 부하가 많이 걸리는데
-consumer가 카프카 서버에 접속, 가져오는 방식을 선택해서 메시지 전달성능에 집중시켜 고성능화 했다
+consumer가 pull해서 메시지 전달성능에 집중시켜 고성능화 했다
 
 ## 카프카
 ![카프카 기본](https://user-images.githubusercontent.com/55946791/83614255-e951a500-a5bf-11ea-9cf9-5fa338eeeb7e.jpg)
@@ -61,7 +62,7 @@ consumer가 카프카 서버에 접속, 가져오는 방식을 선택해서 메�
     - 서버를 늘려서 서버당 처리량 줄이고, 장애발생시 연쇄작용 없앤다
   - 배치처리
     - server&client가 data주고 받을때 I/O작업이 실행된다.
-    - __I/O작업을 최소화__ 하기 위해 작은 메시지는 묶어서 한번에 보낸다.
+    - __I/O작업을 최소화 하기 위해 작은 메시지는 묶어서 한번에__ 보낸다.
 
 ## 카프카 용어
 ### 브로커
@@ -134,3 +135,5 @@ kafka-topics.bat --list --zookeeper localhost:2181
 ## 참고
 - [카프카, 데이터 플랫폼의 최강자]<http://www.yes24.com/Product/Goods/59789254>
 - <https://epicdevs.com/17>
+- <https://soul0.tistory.com/498?category=755055>
+- <https://d2.naver.com/helloworld/7731491>
