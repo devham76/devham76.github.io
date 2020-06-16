@@ -1,5 +1,5 @@
 ---
-title: "spring, websocket"
+title: "Spring, chatting 프로그램 만들기, websocket"
 date: 2020-06-15 20:00:28 -0400
 categories: etc
 tags : [project, websocket, spring]
