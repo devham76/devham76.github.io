@@ -17,6 +17,6 @@ Hyemi Lee(이혜미)
 * Spring boot
 
 ### Experience
-* Line Plus : 20.7 ~ (Server-side Engineer, )
+* Line Plus : 20.7 ~ (Server-side Engineer)
 * 100 days world travel : 19.5 ~ 19.8
 * (주)핌즈 : 17.11 ~ 19.4 (web fullstack)
