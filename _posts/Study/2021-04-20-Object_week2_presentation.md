@@ -1,10 +1,12 @@
 ---
 title: "Study, Object, chapter2&3 presentation"
 date: 2021-04-20 15:30:28 -0400
-categories: [Study]
+categories: Study
 tags : [Study, Object]
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
-
 # chapter03. 역할, 책임, 협력
 - 객체지향 설계란, 올바른 객체에게 올바른 책임을 할당하면서 낮은 결합도와 높은 응집도를 가진 구조를 창조하는 활동이다.
 
