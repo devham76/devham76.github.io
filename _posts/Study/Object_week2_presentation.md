@@ -1,7 +1,7 @@
 ---
 title: "Study, Object, chapter2&3 presentation"
 date: 2021-04-20 15:30:28 -0400
-categories: Study
+categories: [Study]
 tags : [Study, Object]
 ---
 
