@@ -118,16 +118,10 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devham76"
-    - label: "Resume"
-      icon: "far fa-file"
-      url: "https://devham76.github.io/resume/"
 
 # Site Footer
 footer:
   links:
-    - label: "Resume"
-      icon: "far fa-file"
-      url: "https://devham76.github.io/resume/"
     - label: "Email"
       icon: "fas fa-fw fa-link"
       url: "mailto:devham76@gmail.com"
