@@ -12,5 +12,3 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "About Me"
-    url: /portfolio/
